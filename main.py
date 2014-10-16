@@ -16,9 +16,11 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 YELLOW = (255, 251, 0)
 
+#Variable used to control the flow of the story
 lineNumber = 0
 selection = 0
 
+#Gets data from a story file
 characterList, dialogList, referenceList, linearList = wordProcessing.getDialog("test.txt")
 
 #The main loop
@@ -57,14 +59,19 @@ def processEvents():
             return done
         #Processes Keyboard input
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_SPACE and linearList[lineNumber] == ['False']:
-                lineNumber += 1
-            elif event.key == pygame.K_UP:
-                selection = max(0, selection-1)
-            elif event.key == pygame.K_DOWN:
-                selection = min(2, selection +1)
-            elif event.key == pygame.K_RETURN:
-                lineNumber += 1
+            #If there are still lines remaining 
+            if lineNumber < len(characterList):
+                #Process input if there the dialog is a selection
+                if linearList[lineNumber] == ['True']:
+                    if event.key == pygame.K_UP:
+                        selection = max(0, selection-1)
+                    elif event.key == pygame.K_DOWN:
+                        selection = min(2, selection +1)
+                    elif event.key == pygame.K_RETURN:
+                        lineNumber =  int(referenceList[lineNumber].split(",")[selection])   
+                #Process input if the dialog is linear
+                elif event.key == pygame.K_SPACE:
+                    lineNumber = int(referenceList[lineNumber])
     return done
 
 #Determines the logic for the game
@@ -76,6 +83,7 @@ def updateScreen(screen):
     global lineNumber
     screen.fill(WHITE)
     graphics.setBackground(screen, "background1.jpg")
+    graphics.setCharacter(screen, "john.png")
     graphics.drawDialogBox(screen, BLACK, 0.65)
 
     #Display dialog while there is still script
@@ -91,7 +99,7 @@ def updateScreen(screen):
             elif selection == 2:
                 graphics.drawSelection(screen, 2)                
     else:
-        graphics.displayText(screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter 
+        graphics.displayText(screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
         
     
     pygame.display.flip()

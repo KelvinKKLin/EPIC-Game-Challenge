@@ -25,6 +25,11 @@ def setBackground(screen, location):
     background = pygame.image.load(location).convert()
     screen.blit(background, [0,0])
 
+def setCharacter(screen, location):
+    character = pygame.image.load(location).convert()
+    character.set_colorkey(WHITE)
+    screen.blit(character, [int(((screen.get_width())/2)), 0])
+
 #Draws text onto the screen
 def displayText(screen, characterName, text, isASelection):
     

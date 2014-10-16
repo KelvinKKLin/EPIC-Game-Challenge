@@ -1,3 +1,6 @@
-Joe%%Hello World! This is just a test.%%None%%False
-James%%I would like some pork$$I would like some beef$$I love meat%%None%%True
-John%%What are you doing??%%None%%False
+Joe%%Hello World! This is just a test.%%1%%False
+James%%I would like some pork$$I would like some beef$$I love meat%%2, 3, 4%%True
+Joe%%Pork%%5%%False
+Joe%%Beef%%5%%False
+Joe%%Meat%%5%%False
+John%%What are you doing??%%0%%False

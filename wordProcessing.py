@@ -35,4 +35,3 @@ def processSelection(dialogList):
     for choice in range(len(selection)):
         selection[choice] += (len(selection)) * " " 
     return selection
-
