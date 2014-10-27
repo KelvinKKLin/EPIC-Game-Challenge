@@ -14,6 +14,34 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 YELLOW = (255, 251, 0)
 
+class Button():
+    def __init__(self, screen, x1, y1, x2, y2, state):
+        self.screen = screen
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        self.state = state
+        
+        
+    def getX(self):
+        return self.x1, self.x2
+    
+    def getY(self):
+        return self.y1, self.y2
+    
+    def drawButton(self):
+        pygame.draw.rect(self.screen, GREEN, [self.x1, self.y1, self.x2-self.x1, self.y2-self.y1], 0)
+    
+    def getState(self):
+        return self.state        
+        
+    def isPressed(self):
+        pos = pygame.mouse.get_pos()
+        return pos[0] > self.x1 and pos[0] < self.x2 and pos[1] > self.y1 and pos[1] < self.y2
+    
+    
+
 #Draws a dialog box for the game
 def drawDialogBox(screen, colour, percentage):
     lift = 10 #Amount of spacing the rectangle has
@@ -25,13 +53,29 @@ def setBackground(screen, location):
     background = pygame.image.load(location).convert()
     screen.blit(background, [0,0])
 
+#Displays a character onto the screen
 def setCharacter(screen, location):
     character = pygame.image.load(location).convert()
-    character.set_colorkey(WHITE)
+    character.set_colorkey(BLACK)
     screen.blit(character, [int(((screen.get_width())/2)), 0])
-
+    
+#Displays the score onto the screen
+def printScore(screen, score):
+    font = pygame.font.SysFont("Calibri", 25, True, False)
+    output = "Score: " + str(score)
+    text = font.render(output, True, WHITE)
+    screen.blit(text, [screen.get_width() - 125, 10])
+    
+def drawTimer(screen, time):
+    if time < 5:
+        pygame.draw.rect(screen,GREEN,[20,20,100-(time*10),100],0)
+    elif time < 8 and time >= 5:
+        pygame.draw.rect(screen,YELLOW,[20,20,100-(time*10),100],0)
+    else:
+        pygame.draw.rect(screen,RED,[20,20,100-(time*10),100],0)
+        
 #Draws text onto the screen
-def displayText(screen, characterName, text, isASelection):
+def displayDialog(screen, characterName, text, isASelection):
     
     #Different fonts for different purposes
     characterFont = pygame.font.SysFont("Calibri", 25, True, False)
