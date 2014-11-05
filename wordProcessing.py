@@ -46,13 +46,13 @@ def getLessonScript(location):
     dialog = open(location, "r")
     for entry in dialog.readlines():
         data = entry.split("%%")
-        backgroundList.append(data[0])
-        foregroundPicture.append(data[1])
+        backgroundPictureList.append(data[0])
+        foregroundPictureList.append(data[1])
         speakerProfilePictureList.append(data[2])
         speakerList.append(data[3])
         dialogList.append(data[4])
     dialog.close()
-    return backgroundPictureList, foregroundPictureList, speakerProfilePictureList, speakerLiust, dialogList
+    return backgroundPictureList, foregroundPictureList, speakerProfilePictureList, speakerList, dialogList
 
 def getTriviaScript(location):
     backgroundPictureList = []

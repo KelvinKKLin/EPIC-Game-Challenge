@@ -54,10 +54,10 @@ def setBackground(screen, location):
     screen.blit(background, [0,0])
 
 #Displays a character onto the screen
-def setCharacter(screen, location):
+def setCharacter(screen, location, character_x, character_y):
     character = pygame.image.load(location).convert()
     character.set_colorkey(BLACK)
-    screen.blit(character, [int(((screen.get_width())/1.75)), 100])
+    screen.blit(character, [character_x, character_y])
     
 #Displays the score onto the screen
 def printScore(screen, score):

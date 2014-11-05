@@ -136,7 +136,7 @@ class PlayQuiz():
         global lineNumber, timer
         self.screen.fill(WHITE)
         graphics.setBackground(self.screen, "Blackboard.jpg")
-        graphics.setCharacter(self.screen, "Sensei.png")
+        graphics.setCharacter(self.screen, "Sensei.png", int(((self.screen.get_width())/1.75)), 100)
         graphics.drawDialogBox(self.screen, BLACK, 0.65)
     
         #Display dialog while there is still script
@@ -167,6 +167,70 @@ class PlayQuiz():
         pygame.display.flip()    
         
         
+class PlayStory():
+    def __init__(self, screen, bg_colour = BLACK):
+        self.screen = screen
+        self.bg_colour = bg_colour
+        self.backgroundPictureList, self.foregroundPictureList, self.speakerProfilePictureList, self.speakerList, self.dialogList = wordProcessing.getLessonScript("Lesson1.txt")  
+        self.clock = pygame.time.Clock()
+        
+    #The game loop runs while the game is not over
+    def gameLoop(self):
+        done = False
+        clock = pygame.time.Clock()
+        pygame.time.set_timer(TIMER, 1000)
+        while not done:
+            done = self.processEvents()
+            self.updateScreen()
+            clock.tick(60)
+            
+    
+    #Processes user inputs
+    def processEvents(self):
+        global lineNumber, selection, score, timer, quit
+        done = False
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                done = True
+                quit = True
+                return done
+            
+            #Processes Keyboard input
+            elif event.type == pygame.KEYUP:
+                #If there are still lines remaining 
+                if lineNumber < len(self.backgroundPictureList):
+                    #Process input if there the dialog is a selection
+                    if event.key == pygame.K_SPACE:
+                        lineNumber+= 1
+                    elif event.key == pygame.K_LEFT:
+                        lineNumber -= 1
+                    elif event.key == pygame.K_RIGHT:
+                        lineNumber += 1
+        return done
+    
+    
+    #Updates the screen
+    def updateScreen(self):
+        global lineNumber, timer
+        
+        self.screen.fill(WHITE)
+        #Display dialog while there is still script
+        if lineNumber < len(self.backgroundPictureList):
+            graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber])
+            graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber],int(((self.screen.get_width())/3.5)), 100)
+            graphics.drawDialogBox(self.screen, BLACK, 0.65)            
+            #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
+            graphics.displayDialog(self.screen, self.speakerList[lineNumber], self.dialogList[lineNumber], False)
+    
+        else:
+            graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber-1])
+            graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber-1], int(((self.screen.get_width())/3.5)), 100)
+            graphics.drawDialogBox(self.screen, BLACK, 0.65)            
+            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
+        graphics.printScore(self.screen, score)
+        pygame.display.flip()    
+        
+
 #The main loop
 def main():
     screen = initializeGame()
@@ -177,6 +241,9 @@ def main():
         elif state == TRIVIA:
             triviaGame = PlayQuiz(screen)
             triviaGame.gameLoop()
+        elif state == LESSON:
+            lessonGame = PlayStory(screen)
+            lessonGame.gameLoop()
     pygame.quit()
     print "Done"
 
