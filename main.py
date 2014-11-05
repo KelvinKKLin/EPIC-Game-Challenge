@@ -38,7 +38,7 @@ state = MENU
 quit = False
 
 #Gets data from a story file
-characterList, dialogList, referenceList, linearList, scoreList = wordProcessing.getDialog("test.txt")
+
 
 class StartMenu():
     
@@ -46,7 +46,8 @@ class StartMenu():
         self.screen = screen
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
-        self.test = graphics.Button(screen, 100, 100, 400, 400, LESSON)
+        self.lessonButton = graphics.Button(screen, 100, 100, 400, 400, LESSON)
+        self.quizButton = graphics.Button(screen, 500, 100, 600, 700, TRIVIA)
     
     def gameLoop(self):
         done = False
@@ -64,23 +65,27 @@ class StartMenu():
                 quit = True
                 return True
             if event.type == pygame.MOUSEBUTTONDOWN :
-                if self.test.isPressed():
-                    state = self.test.getState()
+                if self.lessonButton.isPressed():
+                    state = self.lessonButton.getState()
+                elif self.quizButton.isPressed():
+                    state = self.quizButton.getState()
         return state != MENU
     
     
     #Updates the screen
     def updateScreen(self):
         self.screen.fill(BLACK)
-        self.test.drawButton()
+        self.lessonButton.drawButton()
+        self.quizButton.drawButton()
         pygame.display.flip()
         
         
         
-class PlayDialog():
+class PlayQuiz():
     def __init__(self, screen, bg_colour = BLACK):
         self.screen = screen
         self.bg_colour = bg_colour
+        self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz1.txt")        
         self.clock = pygame.time.Clock()
         
     #The game loop runs while the game is not over
@@ -103,58 +108,59 @@ class PlayDialog():
                 done = True
                 quit = True
                 return done
+            
             #Processes Keyboard input
             elif event.type == pygame.KEYUP:
                 #If there are still lines remaining 
-                if lineNumber < len(characterList):
+                if lineNumber < len(self.questionList):
                     #Process input if there the dialog is a selection
-                    if linearList[lineNumber] == ['True']:                        
-                        if event.key == pygame.K_UP:
-                            selection = max(0, selection-1)
-                        elif event.key == pygame.K_DOWN:
-                            selection = min(2, selection +1)
-                        elif event.key == pygame.K_RETURN:
-                            score += int(scoreList[lineNumber].split(",")[selection])
-                            lineNumber =  int(referenceList[lineNumber].split(",")[selection])
-                        
-                    #Process input if the dialog is linear
+                    if event.key == pygame.K_UP:
+                        selection = max(0, selection-1)
+                    elif event.key == pygame.K_DOWN:
+                        selection = min(3, selection +1)
                     elif event.key == pygame.K_SPACE:
-                        lineNumber = int(referenceList[lineNumber])
-                        
+                        if selection+1 == int(self.answerList[lineNumber]):
+                            score += int(self.scoreList[lineNumber])
+                        lineNumber += 1
+                        timer = 0
+   
             #Starts trivia timer when doing a quiz
             elif event.type == TIMER:
-                if lineNumber < len(characterList) and linearList[lineNumber] == ['True']:
-                    timer += 1   
-                elif timer != 0:
-                    timer = 0
+                    timer += 1
+        
         return done
     
     
     #Updates the screen
     def updateScreen(self):
-        global lineNumber
+        global lineNumber, timer
         self.screen.fill(WHITE)
-        graphics.setBackground(self.screen, "background1.jpg")
-        graphics.setCharacter(self.screen, "john.png")
+        graphics.setBackground(self.screen, "Blackboard.jpg")
+        graphics.setCharacter(self.screen, "Sensei.png")
         graphics.drawDialogBox(self.screen, BLACK, 0.65)
     
         #Display dialog while there is still script
-        if lineNumber < len(characterList):
-            graphics.displayDialog(self.screen, characterList[lineNumber], dialogList[lineNumber], linearList[lineNumber] == ['True'])
+        if lineNumber < len(self.questionList):
+            #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
+            graphics.displayDialog(self.screen, self.questionList[lineNumber], self.selectionList[lineNumber], True)
             
-            #Draws selection boxes if the dialog is a selection
-            if linearList[lineNumber] == ['True']:
-                if selection == 0:
-                    graphics.drawSelection(self.screen, 0)
-                elif selection == 1:
-                    graphics.drawSelection(self.screen, 1)
-                elif selection == 2:
-                    graphics.drawSelection(self.screen, 2)
-                
-                #Draws the timer, and updates the line number if the user fails
-                graphics.drawTimer(self.screen, timer)
-                if timer >= 10:
-                    lineNumber = 0
+        
+            if selection == 0:
+                graphics.drawSelection(self.screen, 0)
+            elif selection == 1:
+                graphics.drawSelection(self.screen, 1)
+            elif selection == 2:
+                graphics.drawSelection(self.screen, 2)
+            elif selection == 3:
+                graphics.drawSelection(self.screen, 3)
+            
+            #Draws the timer, and updates the line number if the user fails
+            graphics.drawTimer(self.screen, timer, int(self.timeList[lineNumber]))
+
+            if timer >= int(self.timeList[lineNumber]):
+                lineNumber += 1
+                timer = 0
+    
         else:
             graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
         graphics.printScore(self.screen, score)
@@ -168,9 +174,9 @@ def main():
         if state == MENU:
             menu = StartMenu(screen)
             menu.gameLoop()
-        elif state == LESSON:
-            dialogGame = PlayDialog(screen)
-            dialogGame.gameLoop()
+        elif state == TRIVIA:
+            triviaGame = PlayQuiz(screen)
+            triviaGame.gameLoop()
     pygame.quit()
     print "Done"
 

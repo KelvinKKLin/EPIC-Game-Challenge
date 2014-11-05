@@ -57,7 +57,7 @@ def setBackground(screen, location):
 def setCharacter(screen, location):
     character = pygame.image.load(location).convert()
     character.set_colorkey(BLACK)
-    screen.blit(character, [int(((screen.get_width())/2)), 0])
+    screen.blit(character, [int(((screen.get_width())/1.75)), 100])
     
 #Displays the score onto the screen
 def printScore(screen, score):
@@ -66,13 +66,13 @@ def printScore(screen, score):
     text = font.render(output, True, WHITE)
     screen.blit(text, [screen.get_width() - 125, 10])
     
-def drawTimer(screen, time):
+def drawTimer(screen, time, endingTime):
     if time < 5:
-        pygame.draw.rect(screen,GREEN,[20,20,100-(time*10),100],0)
+        pygame.draw.rect(screen,GREEN,[20,20,(100)-((time/float(endingTime))*100),100],0)
     elif time < 8 and time >= 5:
-        pygame.draw.rect(screen,YELLOW,[20,20,100-(time*10),100],0)
+        pygame.draw.rect(screen,YELLOW,[20,20,(100)-((time/float(endingTime))*100),100],0)
     else:
-        pygame.draw.rect(screen,RED,[20,20,100-(time*10),100],0)
+        pygame.draw.rect(screen,RED,[20,20, (100)-((time/float(endingTime))*100),100],0)
         
 #Draws text onto the screen
 def displayDialog(screen, characterName, text, isASelection):
@@ -123,3 +123,6 @@ def drawSelection(screen, selection):
     elif selection == 2:
         rectangularAttributes = [0 + lift, screen.get_height() - dialogHeightDisplacement + 40, screen.get_width() - (lift*2), 20] #Sets the attribute for the rectangle
         pygame.draw.rect(screen, colour, rectangularAttributes, 1)            
+    elif selection == 3:
+            rectangularAttributes = [0 + lift, screen.get_height() - dialogHeightDisplacement + 60, screen.get_width() - (lift*2), 20] #Sets the attribute for the rectangle
+            pygame.draw.rect(screen, colour, rectangularAttributes, 1)      

@@ -13,28 +13,28 @@ def processDialog(text):
         numberOfCharactersStored += 91
     return dialog
 
-#This retrieves data from a file containing the game's dialog and splits it according to character, and reference
-def getDialog(location):
-    characterList = [] #List of strings containing character names
-    dialogList = [] #List of strings containing dialog and/or selections
-    referenceList = [] #List of strings containing reference points
-    linearList = []    # List of booleans denoting whether the dialog is linear
-    scoreList = [] #List of scores for each quiz
-    backgroundList = [] #List of backgrounds
-    imageList = [] #List of character sprites
-    dialog = open(location, "r")
-    for entry in dialog.readlines():
-        data = entry.split("%%")
-        characterList.append(data[0])
-        dialogList.append(data[1])
-        referenceList.append(data[2])
-        linearList.append(data[3].split())
-        scoreList.append(data[4])
-        #backgroundList.append(data[5])
-        #imageList.append(data[6])
+##This retrieves data from a file containing the game's dialog and splits it according to character, and reference
+#def getDialog(location):
+    #characterList = [] #List of strings containing character names
+    #dialogList = [] #List of strings containing dialog and/or selections
+    #referenceList = [] #List of strings containing reference points
+    #linearList = []    # List of booleans denoting whether the dialog is linear
+    #scoreList = [] #List of scores for each quiz
+    #backgroundList = [] #List of backgrounds
+    #imageList = [] #List of character sprites
+    #dialog = open(location, "r")
+    #for entry in dialog.readlines():
+        #data = entry.split("%%")
+        #characterList.append(data[0])
+        #dialogList.append(data[1])
+        #referenceList.append(data[2])
+        #linearList.append(data[3].split())
+        #scoreList.append(data[4])
+        ##backgroundList.append(data[5])
+        ##imageList.append(data[6])
         
-    dialog.close()
-    return characterList, dialogList, referenceList, linearList, scoreList
+    #dialog.close()
+    #return characterList, dialogList, referenceList, linearList, scoreList
     
     
 def getLessonScript(location):
@@ -80,9 +80,3 @@ def processSelection(dialogList):
         selection[choice] += (len(selection)) * " " 
     return selection
 
-a, b, c, d, e = getTriviaScript("Quiz1.txt")
-print a
-print b
-print c
-print d
-print e
