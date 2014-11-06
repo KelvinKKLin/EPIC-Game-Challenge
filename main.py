@@ -17,7 +17,7 @@ RED = (255, 0, 0)
 YELLOW = (255, 251, 0)
 
 #Game States
-MENU = 0
+MAIN_MENU = 0
 LESSON = 1
 TRIVIA = 2
 
@@ -33,11 +33,10 @@ score = 0
 timer = 0
 
 #Used for start menu
-state = MENU
+state = MAIN_MENU
 
+#Whether or not to end the game
 quit = False
-
-#Gets data from a story file
 
 
 class StartMenu():
@@ -46,8 +45,8 @@ class StartMenu():
         self.screen = screen
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
-        self.lessonButton = graphics.Button(screen, 100, 100, 400, 400, LESSON)
-        self.quizButton = graphics.Button(screen, 500, 100, 600, 700, TRIVIA)
+        self.lessonButton = graphics.Button(screen, 560, 240, 967, 390, LESSON)
+        self.quizButton = graphics.Button(screen, 206, 406, 543, 543, TRIVIA)
     
     def gameLoop(self):
         done = False
@@ -69,14 +68,13 @@ class StartMenu():
                     state = self.lessonButton.getState()
                 elif self.quizButton.isPressed():
                     state = self.quizButton.getState()
-        return state != MENU
+        return state != MAIN_MENU
     
     
     #Updates the screen
     def updateScreen(self):
         self.screen.fill(BLACK)
-        self.lessonButton.drawButton()
-        self.quizButton.drawButton()
+        graphics.setBackground(self.screen, "Main_Menu.png")
         pygame.display.flip()
         
         
@@ -87,6 +85,7 @@ class PlayQuiz():
         self.bg_colour = bg_colour
         self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz1.txt")        
         self.clock = pygame.time.Clock()
+        
         
     #The game loop runs while the game is not over
     def gameLoop(self):
@@ -101,7 +100,7 @@ class PlayQuiz():
     
     #Processes user inputs
     def processEvents(self):
-        global lineNumber, selection, score, timer, quit
+        global lineNumber, selection, score, timer, quit, state
         done = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -123,6 +122,12 @@ class PlayQuiz():
                             score += int(self.scoreList[lineNumber])
                         lineNumber += 1
                         timer = 0
+                else:
+                    if event.key == pygame.K_SPACE:
+                        lineNumber = 0
+                        score = 0
+                        state = MAIN_MENU
+                        done = True
    
             #Starts trivia timer when doing a quiz
             elif event.type == TIMER:
@@ -187,7 +192,7 @@ class PlayStory():
     
     #Processes user inputs
     def processEvents(self):
-        global lineNumber, selection, score, timer, quit
+        global lineNumber, selection, score, timer, quit, state
         done = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -206,6 +211,12 @@ class PlayStory():
                         lineNumber -= 1
                     elif event.key == pygame.K_RIGHT:
                         lineNumber += 1
+                else:
+                    if event.key == pygame.K_SPACE:
+                        lineNumber = 0
+                        state = MAIN_MENU
+                        done = True
+   
         return done
     
     
@@ -219,7 +230,6 @@ class PlayStory():
             graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber])
             graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber],int(((self.screen.get_width())/3.5)), 100)
             graphics.drawDialogBox(self.screen, BLACK, 0.65)            
-            #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
             graphics.displayDialog(self.screen, self.speakerList[lineNumber], self.dialogList[lineNumber], False)
     
         else:
@@ -227,7 +237,7 @@ class PlayStory():
             graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber-1], int(((self.screen.get_width())/3.5)), 100)
             graphics.drawDialogBox(self.screen, BLACK, 0.65)            
             graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
-        graphics.printScore(self.screen, score)
+        #graphics.printScore(self.screen, score)
         pygame.display.flip()    
         
 
@@ -235,7 +245,7 @@ class PlayStory():
 def main():
     screen = initializeGame()
     while not quit:
-        if state == MENU:
+        if state == MAIN_MENU:
             menu = StartMenu(screen)
             menu.gameLoop()
         elif state == TRIVIA:
@@ -252,7 +262,7 @@ def initializeGame():
     pygame.init()
     size = (1050, 750)
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("Test Game")
+    pygame.display.set_caption("For I in Python")
     return screen
 
 main() #Runs the game

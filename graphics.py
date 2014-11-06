@@ -30,7 +30,7 @@ class Button():
     def getY(self):
         return self.y1, self.y2
     
-    def drawButton(self):
+    def draw(self):
         pygame.draw.rect(self.screen, GREEN, [self.x1, self.y1, self.x2-self.x1, self.y2-self.y1], 0)
     
     def getState(self):
