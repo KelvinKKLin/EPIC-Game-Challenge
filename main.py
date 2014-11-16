@@ -138,6 +138,9 @@ class PlayQuiz():
         self.bg_colour = bg_colour
         self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz"+str(beltIndex)+".txt")        
         self.clock = pygame.time.Clock()
+        self.emotion = "Happy"
+        
+        
         
         
     #The game loop runs while the game is not over
@@ -188,13 +191,12 @@ class PlayQuiz():
         
         return done
     
-    
     #Updates the screen
     def updateScreen(self):
         global lineNumber, timer
         self.screen.fill(WHITE)
         graphics.setBackground(self.screen, "Blackboard.jpg")
-        graphics.setCharacter(self.screen, "Sensei.png", int(((self.screen.get_width())/1.75)), 100)
+        graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/1.75)), 100)
         graphics.drawDialogBox(self.screen, BLACK, 0.65)
     
         #Display dialog while there is still script
@@ -213,7 +215,7 @@ class PlayQuiz():
                 graphics.drawSelection(self.screen, 3)
             
             #Draws the timer, and updates the line number if the user fails
-            graphics.drawTimer(self.screen, timer, int(self.timeList[lineNumber]))
+            self.emotion = graphics.drawTimer(self.screen, timer, int(self.timeList[lineNumber]))
 
             if timer >= int(self.timeList[lineNumber]):
                 lineNumber += 1

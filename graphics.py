@@ -69,10 +69,13 @@ def printScore(screen, score):
 def drawTimer(screen, time, endingTime):
     if time < 5:
         pygame.draw.rect(screen,GREEN,[20,20,(100)-((time/float(endingTime))*100),100],0)
+        return "Happy"
     elif time < 8 and time >= 5:
         pygame.draw.rect(screen,YELLOW,[20,20,(100)-((time/float(endingTime))*100),100],0)
+        return "Nutral"
     else:
         pygame.draw.rect(screen,RED,[20,20, (100)-((time/float(endingTime))*100),100],0)
+        return "Sad"
         
 #Draws text onto the screen
 def displayDialog(screen, characterName, text, isASelection):
