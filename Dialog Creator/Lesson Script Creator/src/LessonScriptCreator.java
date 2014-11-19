@@ -197,11 +197,11 @@ public class LessonScriptCreator extends javax.swing.JFrame {
         sb.append("%%");
         sb.append("0");//reference?
         submitDialog("Lesson"+(lessonComboBox.getSelectedIndex()+1)+ ".txt", sb);
-        backgroundTextField.setText("");
-        foregroundTextField.setText("");
-        profilePictureTextField.setText("");
+        //backgroundTextField.setText("");
+        //foregroundTextField.setText("");
+        //profilePictureTextField.setText("");
         dialogTextArea.setText("");
-        speakerTextField.setText("");
+        //speakerTextField.setText("");
     }//GEN-LAST:event_submitActionPerformed
 
     /*

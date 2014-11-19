@@ -258,7 +258,7 @@ public class TriviaScriptCreator extends javax.swing.JFrame {
         sb.append("%%");
         sb.append(timeSlider.getValue());
         sb.append("%%");
-        submitDialog("Quiz"+(answerComboBox.getSelectedIndex()+1)+ ".txt", sb);
+        submitDialog("Quiz"+(lessonComboBox1.getSelectedIndex()+1)+ ".txt", sb);
         selection1TextField.setText("");
         selection2TextField.setText("");
         selection3TextField.setText("");

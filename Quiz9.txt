@@ -1,0 +1,8 @@
+In top down design, the main algorithm is written:%%Before the rest of the program is implemented$$After the rest of the program is implemented$$While the rest of the program is being implemented$$Varies based on project and team%%1%%2%%12%%
+Which of the following is the ideal software development process?%%Waterfall$$Spirial$$Prototype$$Top-Down Design%%1%%1%%9%%
+What is the opposite of top-down design?%%East-West Design$$Bottom-up design$$Left-right design$$North-South Design%%2%%1%%9%%
+What is unit testing?%%Testing each product before it is released.$$Testing each sub-program independently of the whole program.$$Testing each program in equal intervals.$$Applying the same set of inputs to multiple programs that does the same thing.%%2%%2%%12%%
+What is top down design?%%Designing the top before the bottom.$$Designing a product with the final result in mind.$$Design a product by starting with the general problem and breaking it into smaller sub-categories.$$Designing a product from the top to the bottom.%%3%%2%%12%%
+Which of the following is rarely used in practice?%%Top-Down Design$$Bottom-up Implementation$$Waterfall$$Prototyping%%3%%1%%9%%
+What is design?%%The process of creating something.$$A form of science$$A form of art$$All of the above%%4%%1%%9%%
+What is the best way to learn about design?%%Professor Sensei$$Zelle's Python Programming Book$$ENGINEER 1D04 Labs, Lectures, and Tutorials$$Designing yourself%%4%%1%%9%%
