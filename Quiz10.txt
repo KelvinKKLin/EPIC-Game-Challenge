@@ -1,0 +1,10 @@
+What does an object NOT consist of?%%A class$$A collection of related information$$A set of perations to manipulate that information$$None of the above%%1%%1%%15%%
+Information in an object is stored in: __________?%%Scope Variables$$Instance Variables$$Local Variables$$Private Variables%%2%%1%%12%%
+Which of the following would not be an appropriate object?%%Physics$$Particles$$Velocity$$More than one of the above%%3%%2%%15%%
+How do you create a Circle object from graphics.py?%%c = Circle()$$c = Circle([3, 3], 5)$$c = Circle(Point(3, 4), 5)$$None of the above%%3%%1%%18%%
+What is the constructor called in Python?%%_init(self)_$$_initialize(self)_$$__init(self)__$$__initialize(self)__%%3%%1%%12%%
+What is encapsulation?%%Information hiding$$Abstraction$$Using accessors and mutators$$All of the above%%4%%2%%15%%
+Every object is a(n) _________ of a class.%%Copy$$Instance$$Blueprint$$Manifestation%%2%%2%%9%%
+What is abstraction?%%Information hiding$$Focusing on what is relevant$$Using getters and setters$$A form of art%%2%%3%%12%%
+What programming paradigm involves the use of objects?%%OOB$$OOD$$OOP$$OOC%%3%%1%%9%%
+What do GUIs consist of?%%Objects$$Classes$$Instances$$Scope variables%%1%%2%%12%%
