@@ -3,15 +3,15 @@ Which of the following is not a way of searching?%%Binary Search$$Linear Search$
 What is linear search?%%An O(n) algorithm$$Looking through every entry in a list to find the desired value$$Useful for unsorted lists$$All of the above%%4%%1%%15%%
 What is binary search?%%A O(log2(n)) algorithm$$A search algorithm that halves the size of the collection of values during each iteration$$An algorithm for sorted lists$$All of the above%%4%%1%%15%%
 What is big-O notation?%%A math formula$$A description of an algorithm's complexity$$An exponential/logarithmic graph$$None of the above%%2%%1%%15%%
-What is sorting?%%Arranging the list in a structured manner$$Finding a pattern within a collection of values$$Rearranging structured values in order to make searching more efficent$$All of the above%%1%%2%%15%%
+What is sorting?%%Arranging the list in a structured manner$$Finding a pattern within a collection of values$$Rearranging structured values in order to make searching more efficient$$All of the above%%1%%2%%15%%
 Which of the following is NOT a sorting algorithm?%%Binary sort$$Quick sort$$Bubble sort$$Merge sort%%1%%1%%12%%
-There is constant tension between:%%Efficency and Memory$$Storage and Memory$$Clarity and Efficiency$$A Programmer and His/Her Supervisor%%3%%1%%12%%
+There is constant tension between:%%Efficiency and Memory$$Storage and Memory$$Clarity and Efficiency$$A Programmer and His/Her Supervisor%%3%%1%%12%%
 What is recursion?%%A type of loop$$Something that refers to itself$$A method that has a "self" parameter$$All of the above%%2%%2%%15%%
 Which of the following can be implemented using recursion?%%Bubble search$$Linear search$$Binary search$$None of the above%%3%%1%%12%%
 Which of the following can be implemented using recursion?%%Factorials$$Fibonacci's sequence$$The Tower of Hanoi$$All of the above%%4%%2%%15%%
 Recursive functions are:%%Finite$$Generalizations of loops$$More efficient than loops$$All of the above%%2%%1%%12%%
 Calling functions is generally:%%Faster than a loop$$The same as a loop$$Slower than a loop$$Better programming practice%%3%%3%%15%%
-When should you use recursion instead of a loop?%%Always$$Sometimes, depends on the situition$$Sometimes, when it is safer to do so$$Never%%2%%2%%15%%
+When should you use recursion instead of a loop?%%Always$$Sometimes, depends on the situation$$Sometimes, when it is safer to do so$$Never%%2%%2%%15%%
 What is a core subfield of computer science?%%Analysis of algorithms$$Programming$$Python$$Engineering 1D04%%1%%1%%9%%
 Binary search is an example of:%%An ideal algorithm$$An approach to abstraction$$A divide and conquer approach to programming$$A sorted list%%3%%1%%12%%
 What is of the following is not a property a recursive function must have?%%There must be one or more base cases that do not require recursion$$A decision must be made$$All chains of recursion must eventually reach a base case$$None of the above%%4%%3%%12%%
