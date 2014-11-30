@@ -1,8 +1,14 @@
-What is the main purpose of a function?%%Ogrinise the code $$Make the code run faster $$Reffer to another line in the code $$Reduce code duplication%%1%%1%%15%%
-When a function is used in a program, we say that the function is _______.%%Called$$Invoked$$Referenced $$All of the above %%4%%1%%15%%
+What is the main purpose of a function?%%Orginise the code $$Make the code run faster $$Refer to another line in the code $$Reduce code duplication%%1%%1%%15%%
+When a function is used in a program, we say that the function is _______.%%Called$$Invoked$$Referenced $$All of the above %%1%%1%%15%%
 What are parameters?%%Variables that are initialized when the function is called $$Restrictions $$Exceptions $$Scope of the function%%1%%1%%30%%
 What does the scope of variable refer to?%%Name space $$Parameters $$Place where a given variable may be refferenced $$Place where the pre-defined python expressions are stored %%3%%1%%15%%
-What is a formal parameter?%%Parameters passed on from the main function $$Parameters given to the main function $$Parameters given to all the functions in a peice of code $$Restrictions on the return statement %%2%%1%%18%%
-What are actual parameters?%%Parameters given to the main function $$Parameters given to all the functions in a peice of code $$Parameters passed on from the main function $$Restrictions on the return statement %%3%%1%%15%%
+What is a formal parameter?%%Data passed on to the function $$Parameters given to the main function $$Parameters given to all the functions in a peice of code $$Restrictions on the return statement %%1%%1%%18%%
 When no return statement is given what does python return?%%Zero$$False $$Actual value $$None %%4%%1%%12%%
-What is the first step when a function is initialized?%%Check paremeters $$Execution at the point of call$$Assign the values specified by the actual parameters $$Control is given to the called function %%2%%1%%18%%
+What is the first step when a function is initialized?%%Check paremeters $$Cease execution at the point of call$$Assign the values specified by the actual parameters $$Control is given to the called function %%2%%1%%18%%
+How are parameters referenced in a method?%%By assigning a variable to the parameter$$By the parameter's name$$By using the dot operator$$All of the above%%2%%1%%12%%
+What is a function?%%A block of code$$A subprogram$$A programming entity that reduces code duplication$$All of the above%%4%%1%%9%%
+How should you get results from a function?%%By assigning the value of the function to a variable$$Using the return statement$$By changing the states of global variables$$All of the above%%2%%1%%12%%
+When does a variable "die"?%%When the program terminates$$After it has been used a large, ambigous number of time$$When the method it is created in ends$$It doesn't die%%3%%1%%12%%
+Can you modify the value of parameters?%%Yes$$No$$It depends on the interpreter$$A and C%%1%%1%%9%%
+What are functions an example of?%%Code hiding$$Information hiding$$Abstraction$$Modularity%%4%%2%%9%%
+How many values can a method return?%%0 values$$1 value$$2 values$$An infinite number of values%%4%%1%%9%%

@@ -1,0 +1,10 @@
+You can skip code using:%%Loops$$If-statements$$Conditions$$Boolean expressions%%2%%1%%9%%
+What is a fundamental concept of programming?%%Inheritance$$Methods and functions$$Encapsulation$$Decision structures%%4%%1%%9%%
+What is a condition?%%The face a computer makes when it sees an if statement.$$Greater than or equal to/Less than or equal to$$A yes-or-no question$$All of the above%%3%%1%%9%%
+Which of the following headers is incorrect?%%if (1 < 3):$$if (3 < 1):$$if <3 < 1>:$$if 1 < 3:%%3%%1%%12%%
+What can should used to make decisions if a previous condition evaluates to false?%%An if statement$$An elif statement$$An else statement$$All of the above%%2%%1%%9%%
+Which of the following can be used as a failsafe?%%An if statement$$An elif statement$$An else statement$$All of the above%%3%%1%%9%%
+What is error handling?%%Black and white box testing$$Making sure your program is bug free by running your program before you distribute it$$Catching errors as they arise, and process them using code$$All of the above%%3%%1%%15%%
+What structure is used for error handling?%%Try-except-finally$$If-elif-else$$Do-while$$All of the above%%1%%1%%9%%
+Which of the following is not a valid except header?%%except:$$except TypeError:$$except YoloError:$$excpet #tableError:%%4%%2%%12%%
+Which of the following is a valid else header?%%else:$$els:$$else do:$$None of the above%%1%%1%%9%%
