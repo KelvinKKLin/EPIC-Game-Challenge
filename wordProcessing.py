@@ -46,6 +46,7 @@ def getLessonScript(location):
     dialog = open(location, "r")
     for entry in dialog.readlines():
         data = entry.split("%%")
+        print data
         backgroundPictureList.append(data[0])
         foregroundPictureList.append(data[1])
         speakerProfilePictureList.append(data[2])
