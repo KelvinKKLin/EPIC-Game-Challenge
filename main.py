@@ -6,6 +6,7 @@ TODO: Implement game
 '''
 
 import pygame
+import random
 import graphics
 import wordProcessing
 
@@ -57,6 +58,8 @@ class StartMenu():
         self.clock = pygame.time.Clock()
         self.lessonButton = graphics.Button(screen, 560, 240, 967, 390, LESSON_LEVEL_SELECTION)
         self.quizButton = graphics.Button(screen, 206, 406, 543, 543, TRIVIA_LEVEL_SELECTION)
+        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
+        self.soundObj.play(-1, fade_ms=2000)         
     
     def gameLoop(self):
         done = False
@@ -75,9 +78,11 @@ class StartMenu():
                 return True
             if event.type == pygame.MOUSEBUTTONDOWN :
                 if self.lessonButton.isPressed():
+                    self.soundObj.fadeout(3000)
                     state = self.lessonButton.getState()
                     print state
                 elif self.quizButton.isPressed():
+                    self.soundObj.fadeout(3000)
                     state = self.quizButton.getState()
         return state != MAIN_MENU
     
@@ -94,6 +99,8 @@ class LevelSelectionMenu():
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
         self.typeOfMenu = typeOfMenu
+        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
+        self.soundObj.play(-1, fade_ms=2000)         
         
         #Implement using for loop(?)
         self.level = []
@@ -127,6 +134,7 @@ class LevelSelectionMenu():
             if event.type == pygame.MOUSEBUTTONDOWN :
                 for i in range(9):
                     if self.level[i].isPressed():
+                        self.soundObj.fadeout(3000)
                         state = self.level[i].getState()
                         beltIndex = i+1
         return state != self.typeOfMenu
@@ -149,6 +157,10 @@ class PlayQuiz():
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
         self.oldMousePos = pygame.mouse.get_pos()        
+        
+        self.bgMusic = ["Bomberguy.wav", "LittleTraveller.wav", "CactusLand.wav", "PinballTwo.wav", "PuzzleKid.wav"]
+        self.soundObj = pygame.mixer.Sound(self.bgMusic[random.randrange(0,5)])
+        self.soundObj.play(-1, fade_ms = 1500)        
         
         self.selectionButtons = []
         self.selectionButtons.append(graphics.Button(screen, 10, 534, 1040, 556, 0))
@@ -198,6 +210,7 @@ class PlayQuiz():
                 else:
                     lineNumber = 0
                     score = 0
+                    self.soundObj.fadeout(1000)
                     state = MAIN_MENU
                     done = True                            
                             
@@ -220,6 +233,7 @@ class PlayQuiz():
                     if event.key == pygame.K_SPACE:
                         lineNumber = 0
                         score = 0
+                        self.soundObj.fadeout(1000)
                         state = MAIN_MENU
                         done = True
    
@@ -270,6 +284,11 @@ class PlayStory():
         self.screen = screen
         self.bg_colour = bg_colour
         self.backgroundPictureList, self.foregroundPictureList, self.speakerProfilePictureList, self.speakerList, self.dialogList = wordProcessing.getLessonScript("Lesson"+str(beltIndex)+".txt")  
+        
+        self.bgMusic = ["ShinyDay.wav", "PuzzleKid.wav", "LiveTogether.wav", "AutumnAvenue.wav", "MorningRush.wav"]
+        self.soundObj = pygame.mixer.Sound(self.bgMusic[random.randrange(0,5)])
+        self.soundObj.play(-1, fade_ms = 1500)                
+        
         self.clock = pygame.time.Clock()
         
     #The game loop runs while the game is not over
@@ -299,6 +318,7 @@ class PlayStory():
                     lineNumber += 1
                 else:
                     lineNumber = 0
+                    self.soundObj.fadeout(1000)
                     state = MAIN_MENU
                     done = True                    
             
@@ -316,6 +336,7 @@ class PlayStory():
                 else:
                     if event.key == pygame.K_SPACE:
                         lineNumber = 0
+                        self.soundObj.fadeout(1000)
                         state = MAIN_MENU
                         done = True
    
