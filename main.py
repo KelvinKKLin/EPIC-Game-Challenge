@@ -140,13 +140,21 @@ class LevelSelectionMenu():
         
         
         
-class PlayQuiz():
+class PlayQuiz():    
+    
     def __init__(self, screen, bg_colour = BLACK):
         self.screen = screen
         self.bg_colour = bg_colour
         self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz"+str(beltIndex)+".txt")        
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
+        self.oldMousePos = pygame.mouse.get_pos()        
+        
+        self.selectionButtons = []
+        self.selectionButtons.append(graphics.Button(screen, 10, 534, 1040, 556, 0))
+        self.selectionButtons.append(graphics.Button(screen, 10, 557, 1040, 574, 1))
+        self.selectionButtons.append(graphics.Button(screen, 10, 575, 1040, 596, 2))
+        self.selectionButtons.append(graphics.Button(screen, 10, 597, 1040, 614, 3))
         
     #The game loop runs while the game is not over
     def gameLoop(self):
@@ -154,10 +162,19 @@ class PlayQuiz():
         clock = pygame.time.Clock()
         pygame.time.set_timer(TIMER, 1000)
         while not done:
+            self.rolloverUpdate()
             done = self.processEvents()
             self.updateScreen()
-            clock.tick(60)
+            clock.tick(60)    
             
+    def rolloverUpdate(self):
+        global selection
+        newMousePos = pygame.mouse.get_pos()
+        if newMousePos != self.oldMousePos: 
+            for i in range(4):        
+                if self.selectionButtons[i].isPressed():
+                    selection = self.selectionButtons[i].getState()
+            self.oldMousePos = newMousePos
     
     #Processes user inputs
     def processEvents(self):
@@ -168,6 +185,22 @@ class PlayQuiz():
                 done = True
                 quit = True
                 return done
+            
+            #Processes Mouse Down events
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if lineNumber < len(self.questionList):
+                    for i in range(4):
+                        if self.selectionButtons[i].isPressed():
+                            if selection+1 == int(self.answerList[lineNumber]):
+                                score += int(self.scoreList[lineNumber])
+                            lineNumber += 1
+                            timer = 0  
+                else:
+                    lineNumber = 0
+                    score = 0
+                    state = MAIN_MENU
+                    done = True                            
+                            
             
             #Processes Keyboard input
             elif event.type == pygame.KEYUP:
@@ -199,17 +232,17 @@ class PlayQuiz():
     #Updates the screen
     def updateScreen(self):
         global lineNumber, timer
+        
         self.screen.fill(WHITE)
         graphics.setBackground(self.screen, "Blackboard.jpg")
         graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/1.75)), 100)
         graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
-    
+        
         #Display dialog while there is still script
         if lineNumber < len(self.questionList):
             #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
             graphics.displayDialog(self.screen, self.questionList[lineNumber], self.selectionList[lineNumber], True, colour[beltIndex - 1], lightColours)
             
-        
             if selection == 0:
                 graphics.drawSelection(self.screen, 0)
             elif selection == 1:
@@ -259,6 +292,15 @@ class PlayStory():
                 done = True
                 quit = True
                 return done
+            
+            #Processes mouse input
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if lineNumber < len(self.backgroundPictureList):
+                    lineNumber += 1
+                else:
+                    lineNumber = 0
+                    state = MAIN_MENU
+                    done = True                    
             
             #Processes Keyboard input
             elif event.type == pygame.KEYUP:
