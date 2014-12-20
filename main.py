@@ -10,12 +10,19 @@ import graphics
 import wordProcessing
 
 #Colours
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
-YELLOW = (255, 251, 0)
 
+WHITE = (255, 255, 255)
+YELLOW = (219, 219, 0) #(255, 251, 0)
+ORANGE = (255, 132, 0)
+GREEN = (0, 140, 12)
+BLUE = (0, 0, 255)
+PURPLE = (92, 0, 204)
+RED = (255, 0, 0)
+BROWN = (115, 85, 2)
+BLACK = (0, 0, 0)
+colour = [WHITE, YELLOW, ORANGE, GREEN, BLUE, PURPLE, RED, BROWN, BLACK]
+lightColours = [WHITE, YELLOW]
+                
 #Game States
 MAIN_MENU = 0
 LESSON = 1
@@ -87,6 +94,7 @@ class LevelSelectionMenu():
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
         self.typeOfMenu = typeOfMenu
+        
         #Implement using for loop(?)
         self.level = []
         self.level.append(graphics.Button(screen, 55, 265, 340, 329, nextState))
@@ -139,9 +147,6 @@ class PlayQuiz():
         self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz"+str(beltIndex)+".txt")        
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
-        
-        
-        
         
     #The game loop runs while the game is not over
     def gameLoop(self):
@@ -197,12 +202,12 @@ class PlayQuiz():
         self.screen.fill(WHITE)
         graphics.setBackground(self.screen, "Blackboard.jpg")
         graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/1.75)), 100)
-        graphics.drawDialogBox(self.screen, BLACK, 0.65)
+        graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
     
         #Display dialog while there is still script
         if lineNumber < len(self.questionList):
             #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
-            graphics.displayDialog(self.screen, self.questionList[lineNumber], self.selectionList[lineNumber], True)
+            graphics.displayDialog(self.screen, self.questionList[lineNumber], self.selectionList[lineNumber], True, colour[beltIndex - 1], lightColours)
             
         
             if selection == 0:
@@ -222,7 +227,7 @@ class PlayQuiz():
                 timer = 0
     
         else:
-            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
+            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False, colour[beltIndex -1], lightColours)  #Denotes the end of a chapter
         graphics.printScore(self.screen, score)
         pygame.display.flip()    
         
@@ -284,14 +289,14 @@ class PlayStory():
         if lineNumber < len(self.backgroundPictureList):
             graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber])
             graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber],int(((self.screen.get_width())/3.5)), 100)
-            graphics.drawDialogBox(self.screen, BLACK, 0.65)            
-            graphics.displayDialog(self.screen, self.speakerList[lineNumber], self.dialogList[lineNumber], False)
+            graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)            
+            graphics.displayDialog(self.screen, self.speakerList[lineNumber], self.dialogList[lineNumber], False, colour[beltIndex-1], lightColours)
     
         else:
             graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber-1])
             graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber-1], int(((self.screen.get_width())/3.5)), 100)
-            graphics.drawDialogBox(self.screen, BLACK, 0.65)            
-            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False)  #Denotes the end of a chapter
+            graphics.drawDialogBox(self.screen, colour[beltIndex], 0.65)            
+            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False, colour[beltIndex], lightColours)  #Denotes the end of a chapter
         #graphics.printScore(self.screen, score)
         pygame.display.flip()    
         

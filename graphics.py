@@ -78,7 +78,7 @@ def drawTimer(screen, time, endingTime):
         return "Sad"
         
 #Draws text onto the screen
-def displayDialog(screen, characterName, text, isASelection):
+def displayDialog(screen, characterName, text, isASelection, currentBeltColour, lightColourList):
     
     #Different fonts for different purposes
     characterFont = pygame.font.SysFont("Calibri", 25, True, False)
@@ -90,7 +90,10 @@ def displayDialog(screen, characterName, text, isASelection):
     widthDisplacement = 1025    
     
     #Creates the character name and displays it onto the screen
-    characterLabel = characterFont.render(characterName, True, WHITE)
+    if currentBeltColour in lightColourList:
+        characterLabel = characterFont.render(characterName, True, BLACK)
+    else:
+        characterLabel = characterFont.render(characterName, True, WHITE)
     screen.blit(characterLabel, [screen.get_width() - widthDisplacement, screen.get_height() - nameHeightDisplacement])
     
     #Process text depending on whether it is a selection or dialog
@@ -101,7 +104,10 @@ def displayDialog(screen, characterName, text, isASelection):
     
     #Renders dialog, and displays it onto the screen
     for line in text:
-        dialogLabel = textFont.render(str(line), True, WHITE)    
+        if currentBeltColour in lightColourList:
+            dialogLabel = textFont.render(str(line), True, BLACK)
+        else:
+            dialogLabel = textFont.render(str(line), True, WHITE)        
         screen.blit(dialogLabel, [screen.get_width() - widthDisplacement, screen.get_height() - dialogHeightDisplacement])
         dialogHeightDisplacement -= 20
         
@@ -110,7 +116,7 @@ def drawSelection(screen, selection):
     
     #Constants - TODO: Enumerate all the constants into one file.
     nameHeightDisplacement = 255
-    dialogHeightDisplacement = 220
+    dialogHeightDisplacement = 215
     widthDisplacement = 1025       
     lift = 10
     percentage = 0.75
