@@ -1,0 +1,10 @@
+How do you use the math library?%%import math$$use math$$using (math)$$math.sqrt(x)%%1%%1%%9%%
+How do you add 2 variables, x and y?%%x + y$$add(x, y)$$add x, y$$None of the above%%1%%1%%9%%
+How do you take 2 to the power of 2?%%2^2$$2*2$$2**2$$All of the above%%3%%1%%9%%
+How do you divide 1 by 2 (assuming the answer is 0.5)?%%1/2$$float(1/2)$$float(1)/float(2)$$All of the above%%3%%2%%12%%
+How do you find the integer quotient of 1 divided by 2?%%1/2$$float(1/2)$$float(1)/float(2)$$All of the above%%1%%2%%12%%
+Which of the following is not part of the math library?%%sqrt()$$max()$$cos()$$log()%%2%%1%%9%%
+Which of the following is part of the math library?%%max()$$range()$$random()$$pi%%4%%1%%9%%
+Which numerical data type could lead to inaccuracies in calculations?%%Ints$$Floats$$Longs$$None of the above%%2%%2%%9%%
+How many positive numbers can an int hold?%%2**32$$(2**32)/2$$((2**32)/2) - 1$$None of the above%%3%%2%%15%%
+What does str(n) do?%%It converts the variable n into a string.$$It yields an error$$It depends on the value of n$$None of the above%%3%%2%%9%%

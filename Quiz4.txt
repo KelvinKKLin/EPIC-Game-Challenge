@@ -1,0 +1,10 @@
+What is string splicing?%%Splitting up of strings$$Duplicating strings$$Combining strings$$None of the above%%1%%1%%9%%
+What does "Hello" + "World" produce?%%HelloWorld$$"HelloWorld"$$"Hello World"$$Hello World%%2%%1%%9%%
+How would you splice x = "Sensei" to get the string "Sensei"?%%x[0:]$$x[0:6]$$x[:]$$All of the above%%4%%2%%12%%
+What is the first thing you have to do when reading/writing to a file?%%Create the file$$Open the file$$Read the file$$Write to the file%%2%%1%%9%%
+What should you always to after reading from/writing to a file%%Save the file$$Delete the file$$Encrypt the file$$None of the above%%4%%1%%9%%
+What is usually a good idea after reading from/writing to a file?%%Closing the file$$Terminating the program$$Moving the buffer back to the orginial position$$All of the above%%1%%1%%9%%
+Which of the following allows you to read from a file?%%read()$$readLines()$$readLine()$$All of the above%%4%%1%%9%%
+According to Professor Sensei, how many ways can you write to a file?%%1$$2$$3$$4%%2%%1%%9%%
+What is used to represent international writing systems?%%Unicode$$ASCII$$All of the above$$None of the above%%1%%1%%9%%
+Which of the following is used to represent English?%%Unicode$$ASCII$$All of the above$$None of the above%%3%%1%%9%%

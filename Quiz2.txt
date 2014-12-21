@@ -1,0 +1,10 @@
+What is a variable?%%A jar$$A programming entity which references a value by a given name$$A box$$All of the above%%2%%1%%9%%
+Which of the following is a valid variable name?%%8ProjectKanon$$@ProjectKanon$$_ProjectKanon$$None of the above%%3%%2%%12%%
+Variables in Python:%%Can only hold one type of data$$Can hold many different types of data$$Can hold many types of data, but the type must be declared beforehand$$None of the above%%2%%1%%12%%
+Which of the following is not a built in variable type?%%bool$$int$$str$$double%%4%%1%%9%%
+What is a float?%%A whole number$$A large number$$A decimal number$$All of the above%%3%%1%%9%%
+What is a boolean?%%A data type named after George Boole.$$True$$False$$All of the above%%4%%1%%9%%
+How do you get input from the user?%%variable = input("Enter prompt here")$$get variable$$variable = input variable$$cin >> variable%%1%%1%%9%%
+Which of the following is a valid for loop header?%%For i in Python:$$for i in Python:$$For i in Python():$$for i in Python():%%2%%2%%15%%
+Which of the following is iterateable?%%Strings$$Lists$$Floats$$1 and 2%%4%%1%%9%%
+What does range(n) do?%%Generates a list of numbers from 0 to n-1$$Generates an error$$Loops a for loop n numbers of times$$1, 2, or 3 depending on the circumstance%%1%%2%%15%%

@@ -19,7 +19,7 @@ Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%But I think tha
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, what is computing?%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To begin, let's revisit our definitioon for programming. To program is to devise a series of steps, known as an algorithm, in order to solve a problem.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To compute, therefore, is to write programs for computers to solve problems, to create smart products, to explore our world, and to connect people. It expands beyond simple programming, and it expands into the fields of science, mathematics, information technology, and engineering. It is more than just solving a problem: it is taking a holistic approach into designing a product, taking into account the risks and benefits from a design decision, the health and safety of those using your program, and quite possibly the environment, and the impact that program has on society.%%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To compute is to incoporate hardware with software.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To compute is to incorporate hardware with software.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Before we end for today, let's take a look at how that happens.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%The computer consists of 5 essential parts, in our simplified model of a functional computer. %%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%These are: input devices, the CPU, the RAM, the storage, and the output devices.%%0%%0
