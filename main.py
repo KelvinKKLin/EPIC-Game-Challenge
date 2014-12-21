@@ -60,7 +60,8 @@ class StartMenu():
         self.quizButton = graphics.Button(screen, 206, 406, 543, 543, TRIVIA_LEVEL_SELECTION)
         self.soundObj = pygame.mixer.Sound("BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
-    
+        self.pushSound = pygame.mixer.Sound("Woosh.wav")
+       
     def gameLoop(self):
         done = False
         clock = pygame.time.Clock()
@@ -78,11 +79,13 @@ class StartMenu():
                 return True
             if event.type == pygame.MOUSEBUTTONDOWN :
                 if self.lessonButton.isPressed():
+                    self.pushSound.play()
                     self.soundObj.fadeout(3000)
                     state = self.lessonButton.getState()
-                    print state
                 elif self.quizButton.isPressed():
+                    self.pushSound.play()
                     self.soundObj.fadeout(3000)
+
                     state = self.quizButton.getState()
         return state != MAIN_MENU
     
@@ -134,6 +137,8 @@ class LevelSelectionMenu():
             if event.type == pygame.MOUSEBUTTONDOWN :
                 for i in range(9):
                     if self.level[i].isPressed():
+                        pushSound = pygame.mixer.Sound("Woosh.wav")
+                        pushSound.play()                        
                         self.soundObj.fadeout(3000)
                         state = self.level[i].getState()
                         beltIndex = i+1
@@ -157,10 +162,13 @@ class PlayQuiz():
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
         self.oldMousePos = pygame.mouse.get_pos()        
-        
+        pygame.mixer.init()
         self.bgMusic = ["Bomberguy.wav", "LittleTraveller.wav", "CactusLand.wav", "PinballTwo.wav", "PuzzleKid.wav"]
         self.soundObj = pygame.mixer.Sound(self.bgMusic[random.randrange(0,5)])
-        self.soundObj.play(-1, fade_ms = 1500)        
+        self.soundObj.set_volume(0.7)
+        self.soundObj.play(-1, fade_ms = 1500)
+        self.correctSound = pygame.mixer.Sound("ElevatorDing.wav")
+        self.incorrectSound = pygame.mixer.Sound("DoorBuzzer.wav")
         
         self.selectionButtons = []
         self.selectionButtons.append(graphics.Button(screen, 10, 534, 1040, 556, 0))
@@ -204,7 +212,10 @@ class PlayQuiz():
                     for i in range(4):
                         if self.selectionButtons[i].isPressed():
                             if selection+1 == int(self.answerList[lineNumber]):
+                                self.correctSound.play()
                                 score += int(self.scoreList[lineNumber])
+                            else:
+                                self.incorrectSound.play()
                             lineNumber += 1
                             timer = 0  
                 else:
@@ -225,8 +236,11 @@ class PlayQuiz():
                     elif event.key == pygame.K_DOWN:
                         selection = min(3, selection +1)
                     elif event.key == pygame.K_SPACE:
-                        if selection+1 == int(self.answerList[lineNumber]):
+                        if selection+1 == int(self.answerList[lineNumber]): 
+                            self.correctSound.play()
                             score += int(self.scoreList[lineNumber])
+                        else:
+                            self.incorrectSound.play()
                         lineNumber += 1
                         timer = 0
                 else:
