@@ -6,13 +6,33 @@ This processes text used for the game.
 '''
 
 #This splits a long dialog into lists of 91 characters to be displayed on the screen
+#def processDialog(text):
+    #dialog = []
+    #numberOfCharactersStored = 0
+    #for char in text:
+        #dialog.append(text[numberOfCharactersStored:numberOfCharactersStored+91])
+        #numberOfCharactersStored += 91
+    #return dialog
+    
 def processDialog(text):
     dialog = []
-    numberOfCharactersStored = 0
-    for char in text:
-        dialog.append(text[numberOfCharactersStored:numberOfCharactersStored+91])
-        numberOfCharactersStored += 91
+    listOfText = text.split()
+    line = ""
+    for i in range(len(listOfText)):
+        if len(line) < (90 - (len(listOfText[i]) + 1)):
+            line = line + listOfText[i] + " "
+        else:
+            dialog.append(line)
+            try:
+                line = listOfText[i] + " "
+            except:
+                line = ""
+            
+    if not dialog or line:
+        dialog.append(line)
     return dialog
+
+
 
 ##This retrieves data from a file containing the game's dialog and splits it according to character, and reference
 #def getDialog(location):
@@ -84,3 +104,4 @@ def processSelection(dialogList):
 
 def getQuestionSequence(lenList):
     return random.sample(xrange(lenList), lenList)
+
