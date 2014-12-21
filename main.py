@@ -159,6 +159,7 @@ class PlayQuiz():
         self.screen = screen
         self.bg_colour = bg_colour
         self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz"+str(beltIndex)+".txt")        
+        self.questionSequence = wordProcessing.getQuestionSequence(len(self.questionList))
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
         self.oldMousePos = pygame.mouse.get_pos()        
@@ -211,9 +212,9 @@ class PlayQuiz():
                 if lineNumber < len(self.questionList):
                     for i in range(4):
                         if self.selectionButtons[i].isPressed():
-                            if selection+1 == int(self.answerList[lineNumber]):
+                            if selection+1 == int(self.answerList[self.questionSequence[lineNumber]]):
                                 self.correctSound.play()
-                                score += int(self.scoreList[lineNumber])
+                                score += int(self.scoreList[self.questionSequence[lineNumber]])
                             else:
                                 self.incorrectSound.play()
                             lineNumber += 1
@@ -236,9 +237,9 @@ class PlayQuiz():
                     elif event.key == pygame.K_DOWN:
                         selection = min(3, selection +1)
                     elif event.key == pygame.K_SPACE:
-                        if selection+1 == int(self.answerList[lineNumber]): 
+                        if selection+1 == int(self.answerList[self.questionSequence[lineNumber]]): 
                             self.correctSound.play()
-                            score += int(self.scoreList[lineNumber])
+                            score += int(self.scoreList[self.questionSequence[lineNumber]])
                         else:
                             self.incorrectSound.play()
                         lineNumber += 1
@@ -266,10 +267,11 @@ class PlayQuiz():
         graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/1.75)), 100)
         graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
         
+        
         #Display dialog while there is still script
         if lineNumber < len(self.questionList):
             #text = "".join(wordProcessing.processSelection(self.selectionList[lineNumber]))
-            graphics.displayDialog(self.screen, self.questionList[lineNumber], self.selectionList[lineNumber], True, colour[beltIndex - 1], lightColours)
+            graphics.displayDialog(self.screen, self.questionList[self.questionSequence[lineNumber]], self.selectionList[self.questionSequence[lineNumber]], True, colour[beltIndex - 1], lightColours)
             
             if selection == 0:
                 graphics.drawSelection(self.screen, 0)
@@ -281,9 +283,9 @@ class PlayQuiz():
                 graphics.drawSelection(self.screen, 3)
             
             #Draws the timer, and updates the line number if the user fails
-            self.emotion = graphics.drawTimer(self.screen, timer, int(self.timeList[lineNumber]))
+            self.emotion = graphics.drawTimer(self.screen, timer, int(self.timeList[self.questionSequence[lineNumber]]))
 
-            if timer >= int(self.timeList[lineNumber]):
+            if timer >= int(self.timeList[self.questionSequence[lineNumber]]):
                 lineNumber += 1
                 timer = 0
     

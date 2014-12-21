@@ -1,4 +1,5 @@
 #wordProcessing.py
+import random
 
 '''
 This processes text used for the game.
@@ -81,3 +82,5 @@ def processSelection(dialogList):
         selection[choice] += (len(selection)) * " " 
     return selection
 
+def getQuestionSequence(lenList):
+    return random.sample(xrange(lenList), lenList)
