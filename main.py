@@ -61,7 +61,8 @@ class StartMenu():
         self.soundObj = pygame.mixer.Sound("BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
         self.pushSound = pygame.mixer.Sound("Woosh.wav")
-       
+        self.mouseIsDown = False
+        
     def gameLoop(self):
         done = False
         clock = pygame.time.Clock()
@@ -72,28 +73,48 @@ class StartMenu():
             
     #Processes user inputs
     def processEvents(self):
-        global state, quit
+        global state, quit           
+        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 quit = True
                 return True
             if event.type == pygame.MOUSEBUTTONDOWN :
+                self.mouseIsDown = True
                 if self.lessonButton.isPressed():
                     self.pushSound.play()
                     self.soundObj.fadeout(3000)
                     state = self.lessonButton.getState()
-                elif self.quizButton.isPressed():
+                elif self.quizButton.isPressed():                     
                     self.pushSound.play()
                     self.soundObj.fadeout(3000)
-
                     state = self.quizButton.getState()
+            else:
+                self.mouseIsDown = False
+                    
         return state != MAIN_MENU
     
     
     #Updates the screen
     def updateScreen(self):
         self.screen.fill(BLACK)
-        graphics.setBackground(self.screen, "Main_Menu.png")
+        graphics.setBackground(self.screen, "Menu.png")
+        
+        if self.quizButton.isPressed():
+            if self.mouseIsDown:
+                pressed = pygame.image.load("TriviaButton_Pressed.png").convert()
+                self.screen.blit(pressed, [self.quizButton.getX()[0]-2,self.quizButton.getY()[0]-2])    
+            else:
+                hover = pygame.image.load("TriviaButton_Hover.png").convert()
+                self.screen.blit(hover, [self.quizButton.getX()[0]-2,self.quizButton.getY()[0]-2])         
+        elif self.lessonButton.isPressed():
+            if self.mouseIsDown:
+                pressed = pygame.image.load("StoryButton_Pressed.png").convert()
+                self.screen.blit(pressed, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])    
+            else:
+                hover = pygame.image.load("StoryButton_Hover.png").convert()
+                self.screen.blit(hover, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])             
+            
         pygame.display.flip()
         
 class LevelSelectionMenu():
@@ -104,13 +125,14 @@ class LevelSelectionMenu():
         self.typeOfMenu = typeOfMenu
         self.soundObj = pygame.mixer.Sound("BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
+        self.mouseIsDown = False
         
         #Implement using for loop(?)
         self.level = []
-        self.level.append(graphics.Button(screen, 55, 265, 340, 329, nextState))
-        self.level.append(graphics.Button(screen, 55, 369, 340, 432, nextState))
-        self.level.append(graphics.Button(screen, 55, 472, 340, 534, nextState))
-        self.level.append(graphics.Button(screen, 55, 575, 340, 639, nextState))
+        self.level.append(graphics.Button(screen, 57, 267, 340, 329, nextState))
+        self.level.append(graphics.Button(screen, 57, 371, 340, 432, nextState))
+        self.level.append(graphics.Button(screen, 57, 474, 340, 534, nextState))
+        self.level.append(graphics.Button(screen, 57, 577, 340, 639, nextState))
         self.level.append(graphics.Button(screen, 376, 265, 660, 329, nextState))
         self.level.append(graphics.Button(screen, 376, 369, 660, 432, nextState))
         self.level.append(graphics.Button(screen, 376, 472, 660, 534, nextState))
@@ -135,6 +157,7 @@ class LevelSelectionMenu():
                 quit = True
                 return True
             if event.type == pygame.MOUSEBUTTONDOWN :
+                self.mouseIsDown = True
                 for i in range(9):
                     if self.level[i].isPressed():
                         pushSound = pygame.mixer.Sound("Woosh.wav")
@@ -142,6 +165,8 @@ class LevelSelectionMenu():
                         self.soundObj.fadeout(3000)
                         state = self.level[i].getState()
                         beltIndex = i+1
+            else:
+                self.mouseIsDown = False
         return state != self.typeOfMenu
     
     
@@ -149,6 +174,17 @@ class LevelSelectionMenu():
     def updateScreen(self):
         self.screen.fill(BLACK)
         graphics.setBackground(self.screen, "Level_Menu.png")
+        
+        #event = pygame.event.poll()
+        for i in range(len(self.level)):
+            if self.level[i].isPressed():
+                if self.mouseIsDown:
+                    pressed = pygame.image.load(str(i+1) + "_Pressed.png").convert()
+                    self.screen.blit(pressed, [self.level[i].getX()[0],self.level[i].getY()[0]])    
+                else:
+                    hover = pygame.image.load(str(i+1) + "_Hover.png").convert()
+                    self.screen.blit(hover, [self.level[i].getX()[0]-2,self.level[i].getY()[0]-2])             
+        
         pygame.display.flip()
         
         

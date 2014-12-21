@@ -23,7 +23,6 @@ class Button():
         self.y2 = y2
         self.state = state
         
-        
     def getX(self):
         return self.x1, self.x2
     
@@ -38,10 +37,9 @@ class Button():
         
     def isPressed(self):
         pos = pygame.mouse.get_pos()
-        return pos[0] > self.x1 and pos[0] < self.x2 and pos[1] > self.y1 and pos[1] < self.y2
+        return pos[0] > self.x1 and pos[0] < self.x2 and pos[1] > self.y1 and pos[1] < self.y2      
+         
     
-    
-
 #Draws a dialog box for the game
 def drawDialogBox(screen, colour, percentage):
     lift = 10 #Amount of spacing the rectangle has
