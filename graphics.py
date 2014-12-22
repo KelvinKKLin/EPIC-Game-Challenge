@@ -34,6 +34,9 @@ class Button():
     
     def getState(self):
         return self.state        
+    
+    def setState(self, state):
+        self.state = state
         
     def isPressed(self):
         pos = pygame.mouse.get_pos()
@@ -133,3 +136,13 @@ def drawSelection(screen, selection):
     elif selection == 3:
             rectangularAttributes = [0 + lift, screen.get_height() - dialogHeightDisplacement + 60, screen.get_width() - (lift*2), 20] #Sets the attribute for the rectangle
             pygame.draw.rect(screen, colour, rectangularAttributes, 1)      
+            
+def drawEssentialButtons(screen, isMute):
+    exit = pygame.image.load("exit.png").convert()
+    screen.blit(exit, [990, 690])
+    if isMute:
+        volume = pygame.image.load("volume.png").convert()
+        screen.blit(volume, [930, 690])
+    else:
+        mute = pygame.image.load("mute.png").convert()
+        screen.blit(mute, [930, 690])
