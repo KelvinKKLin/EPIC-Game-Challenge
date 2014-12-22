@@ -1,7 +1,5 @@
-EPIC-Game-Challenge
+♥ Project Kanon's For i in Python! ♥
 ===================
-
-♥ Project Kanon ♥
 
 Welcome to Project Kanon! Project Kanon is a student run team consisting of dedicated game developers and programmers who are interested in creating an interactive and appealing game for students to learn programming. All our code is open-source, and made free of charge, so feel free to download a copy of our code to use it in your own project. Additionally, Project Kanon is always looking for committed Alpha and Beta testers, as well as fans who want to sign up for our mailing list. If you are interested, you may sign up at https://docs.google.com/forms/d/1pFgpsSuTNAb32Hkw3Wr9Fu57AZ-f6DH3dLoxPm14xyo/viewform. 
 
