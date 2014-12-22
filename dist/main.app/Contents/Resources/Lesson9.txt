@@ -1,0 +1,116 @@
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Welcome back, young one.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Today, we are going to look at an important concept in computing: simulation and design.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%At this point, you have all the tools you need to write some pretty powerful programs.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%So, we are going to learn how to design great programs today in order to reflect the real world. Are you ready?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%The first thing we're going to look at is called Top Down Design. The essence of top down design is to start with a big problem, and the reduce that problem into smaller problems until they can be solved. Each problem is reduced until the individual problems are so easy to solve, that a white belt programmer code it!%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Now, as a black belt programmer, you wouldn't want to lose to those white belts, would you?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, top down design leads us to a very interesting concept in computing: separation of concerns. That is, separating the program into different concerns or problems to tackle, so that we can divert all our attention to that problem, instead of having to juggle many problems at once. Each of our sub-problems can be represented in a structure chart. It's like an objective tree, where the lower nodes of the chart denote sub-categories of the nodes above.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, there are steps that you need to take in order to implement top-down design.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%First, define your problem, and break that problem up into smaller sub-problems, until they are trivial to solve.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Next, implement a code-solution for each of the sub-problems.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Finally, write your final program, using the snippets of code you wrote to solve each of the sub-problems. Repeat until you have your working program.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Now, young one, what comes around must go around.%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%Therefore, we will now learn about the opposite of Top-Down design, known as Bottom-Up Implementation.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Bottom-up implementation is where you code small blocks of code at a time, testing them, and then using these blocks of code to build your final program.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%The beauty of bottom-up design is that you can be assured the solutions to your sub-problems are all functional by the time you code your final program.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Very quickly, I will now go over 2 more design techniques.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Prototyping is where you start off with a "semi-solution" to your program, and then you add features to it until you get a fully functional program. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Repeated use of prototyping leads to spiral development, where you repeat a process (like the Waterfall process discussed in lecture), over and over again, until you arrive at a final product. Note also, young one, that although the waterfall process is the ideal software development process, it is rarely used in the real world, and it is always used in tandem with the spiral development process.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Finally, before we end our lesson for today, I would like to add that there is no single way to approach design. It is as much an art as a science. You can't fully learn how to design without having designed anything yourself. That is, go out, and have some fun coding!%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%You are almost at the end, of the beginning of your programming journey, but before that, I have one final lesson for you.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Last but not least, we will be learning about Algorithms and Recursion.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%All right, let's get started.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will begin by looking at a concept called searching. Searching in all its essence is looking through a collection of data like a list.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will be examining two ways of searching: binary search, linear search. Study these well, young one, as they will be vital skills you need as a programmer.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Let's start with binary search. First, imagine a sorted list like this one: [1, 3, 5, 7, 9]. We want to find a certain value, let's say, 9. %%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%So we start looking by going to the center of the list. We find the value 5 is at the center.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now we ask ourselves, is 5 equal to our desired value?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we ask ourselves, is 5 less than our desired value?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we now know that the value of 9 is not in the bottom half of the list. So we can "discard" that list, and only search the upper half of the list. %%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%So the list we will now search will be [7, 9].%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we now find the middle value of that list. To do that, we add the highest index of the list with the lowest index of the list and we divide by 2. In this case, the indices are 3 and 4. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Hence, adding them would yield 7, and in Python 7/2 = 3.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Remember integer division?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Anyway, we now look at the value of 7, which is at the third index of our list. And we ask ourselves:%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Is 7 equal to our desired value, 9?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we ask ourselves, is 7 less than our desired value, 9?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So once again, we cut our list in half, this time, forming a list with one element, [9].%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We, once again, go to the middle of the list and select the middle value. In this case, the value is 9.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We ask ourselves, is 9 equal to our desired value?%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%YES!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Therefore, we return the index of 9 from the list, in this case, it is 4, and the search algorithm terminates.%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%However, young one, be warned that binary search only works with sorted lists. Binary search cannot be used with lists that are not sorted.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So what do we do with unsorted lists?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, we can sort them, but that would be a lesson for later.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Right now, we are going to learn about a search algorithm that we can use with an unsorted list: linear search!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%The premise of linear search is extremely simple. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%All linear search is, is go through every item in the list, and if the item is equal to the desired value, return the index of that value. Otherwise, return -1, or another value denoting that the item is not in the list.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Consider the following list: [2, 4, 1, 23, 442, 32, 55]. We want to look for 1 in our list.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we start with the first index of the list. At index 0, the value is 2. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Is 2 equal to our desired value, 1?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we move onto the next index of the list, 1, which holds the value of 4.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We ask ourselves, is 4 equal to our desired value, 1?%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%No!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So we move on to the next index, 2, and that holds a value of 1.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We ask ourselves, is 1 equal to 1?%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Yes!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%So since 1 is located at the second index in the list [2, 4, 1, 23, 442, 32, 55], we return the value of 2.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%And that young one, is linear search.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, young one, let me ask you, why would you not want to use linear search with a sorted list?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%The answer is simple: efficiency. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%With binary search, after each iteration, the search space decreases by a half. That is, you reduce the amount of data you have to search by half. That means that the complexity of the program increases by log base 2 of N. You need to add 2 to the power of N items in order to increase the number of searches required by 1.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%On the other hand, with linear search, you are looking at every item in the list. That means that the program has a complexity of N. Adding 1 item to the list would increase the maximum number of searches required to search through the list by 1.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To put that in perspective, adding 1024 items to a sorted list would increase the maximum number of binary searches required by 10, while it would increase the maximum number of linear searches required by 1024. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%This means that it would take linear search a lot longer to execute with large sorted lists, than binary search.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%However, with small lists, both searches are almost instantaneous, and the efficiency would not matter much.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, you may be wondering, if binary search is so much more efficient, why don't we sort large lists first, before searching. That way, we could always use binary search, and avoid linear search all together.%%0%%0
+Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%The truth is, young one, that life is never that simple. Sorting itself is a time intensive process, and with large lists such as databases, new data is added all the time. In that case, it may be more efficient to leave the list unsorted and to just use linear search.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%But, if you really insist, I will teach you how to sort.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To sort, first of all, means to arrange a collection of data in non-decreasing (or increasing) order.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will be looking at selection sort, merge sort, bubble sort, as well as quick sort.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, to remember selection sort, think of yourself as a small child. You are given a large amount of flash cards with numbers, and you are told to rearrange them. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%You would find the smallest number, and put that in front. Then you would find the second smallest number and put it beside the smallest number. You would keep doing that until the numbers are in increasing order.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Similarly, with selection sort, you would start by searching the list for the smallest value. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then, you would swap the position of the smallest item with the first item in the list. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%You would then find the second smallest item in the list, and swap that with the second item in the list. You would keep repeating this algorithm until you go through the entire list.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%As you can see, young one, this is not an efficient way to sort.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%More efficiently, there is merge sort!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Merge sort uses divide and conquer in order to sort a list. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%It starts off by splitting the list in half.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then it splits those two lists in half.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then again...%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then again...%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%And it keeps on splitting the lists until there is only one item per list. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then it sorts each list, pair by pair, and then merges them back together.%%0%%0Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%This algorithm will be discussed further when we talk about recursion.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Another way to sort is bubble sort. Let's look at bubble sort!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Bubble sort is another example of Divide and Conquer.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%First, the algorithm compares the first two elements.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%If the first item is greater than the second item, then they will be swapped.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then the computer looks at each pair of the list and sorts the list with 2 elements at a time.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%This is repeated the length of the list minus one times.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%That is, as you sort through the list using bubble sort, it appears as if the values bubble up to their respective positions.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Finally, we will look at quick sort.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, young one, with quick sort, you will notice that there is constant tension between efficiency and clarity. That is, with the other sorting algorithms, they are easier to understand; however, they are not as efficient. With efficiency comes the price of clarity. Generally, a more efficient algorithm would be harder to understand.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%There are three elements present in quick sort: a pivot, an element, and a wall.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Each element is compared with the pivot, and if it is smaller than the pivot, it is placed to the left of the wall. Otherwise, if it is greater than the pivot, then the element is placed to the right of the wall.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then the program repeats the previous algorithm, each time splitting the array into smaller arrays until there is a single array.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, you may be wondering, what is the value of quick sort?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, in theory, the efficiency of quick sort is N-squared, however, because the pivot is randomly selected within each sub array, it behaves more like an N-log-N algorithm.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%That's super fast!%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, before you graduate from Python Programming, there is one more concept you need to know: recursion.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Recursion is a form of iteration where a method calls itself. %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%There are two conditions to recursion: %%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%One, there must be at least one base case, where no recursion is required. In other words, the function simply returns a value.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%And two, all chains of recursion must eventually arrive at a base case. Otherwise, it would be pointless, as the program would never end.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, recursion is simply another type of iteration, just like a loop.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Which one's faster you ask?%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, they're both the same in terms of speed, so just think of recursion as another tool you could use for programming.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%In some cases, recursion can make your code cleaner, whereas in other cases, it makes your code more complicated.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Some things you can implement with recursion include binary search, quick sort, the Fibonacci sequence, the Tower of Hanoi, pathfinding, and many others.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Well, young one, you have now grown up into quite the proficient programmer.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%That is all I have to teach you. Congratulations for learning to program in Python (and enjoy the Christmas Break!)%%0%%0

@@ -1,0 +1,24 @@
+What is a loop?%%An entity that repeats blocks of code$$The shape of a hulla-hoop$$A rip in the frabric of space-time$$All of the above%%1%%1%%9%%
+Which of the following is not a type of loop in Python?%%Do while$$File$$While-Then$$All of the above%%4%%1%%12%%
+What kind of loop is a for loop?%%A definite loop$$An indefinite loop$$An infinite loop$$None of the above%%1%%1%%9%%
+What kind of loop is a while loop?%%A definite loop$$An indefinite loop$$An infinite loop$$All of the above%%2%%1%%9%%
+What is an infinite loop?%%These loops do not exist$$A loop that repeats for an ambigously number of time$$A loop that repeats forever without stopping$$B and C%%3%%2%%15%%
+Which of the following is not a loop pattern?%%Interactive Loop$$Sentinel Loop$$File Loop$$Game Loop%%4%%1%%9%%
+What is an interactive loop?%%A loop that allows users can interactive with$$A loop that executes based on certain criteria given by the user$$A program that makes a human repeat a certain task$$A and B%%2%%2%%15%%
+What is a nested loop?%%A loop inside a loop$$Two sequential loops$$A loop that is in a speclalized method like open()$$None of the above%%2%%1%%12%%
+Which of the following is not a boolean operator?%%Not$$And$$Or$$Zor%%4%%1%%9%%
+True and True and False and True?%%True$$False$$True True False True$$True[2], False[0]%%2%%1%%15%%
+True or True or False or True?%%True$$False$$True, True, False, True$$True[2], False[0]%%1%%1%%15%%
+Will 1 and 0 and (3/0) and math.sqrt(-30) execute?%%Yes$$No$$Depends on the compiler$$Only in a try-except-finally statement%%1%%2%%15%%
+Evaluate 1 and 0 and (3/0) and math.sqrt(-30)%%Either 1 or 0$$Either True or False$$Error: Cannot divide by 0$$Error: Cannot take square root of -30%%1%%2%%15%%
+Evaluate 1 or 0 and (3/0) and math.sqrt(-30)%%Either 1 or 0$$Either True or False$$Error: Cannot divide by 0$$Error: Cannot take square root of a negative number%%1%%2%%15%%
+What is not(3!=4)%%True$$False$$3$$0%%2%%1%%9%%
+What is the relational operator for "Equals to"?%%=$$==$$.equals()$$None of the above%%2%%1%%9%%
+Which of the following Python expressions evaluates to True no matter what the value of x is?%%True or x$$x or True$$True and x$$x and True%%1%%1%%15%%
+Which of the following Python expressions evaluates to False no matter what the value of x?%%x or False.$$False and x.$$False or x.$$x and False.%%2%%1%%15%%
+The boolean expression not(a and (not b)) is equivalent to%%(not a) and b.$$(not a) and (not b).$$(not a) or b.$$(not a) or (not b).%%3%%1%%15%%
+Which of the following people showed that logical operators behave like arithmetic operators?%%George Boole.$$Gottlieb Leibniz.$$Charles Babbage.$$Alan Turing.%%1%%1%%15%%
+What is the value of the Python expression: 2 == (1 or 2 or 3)?%%1.$$False. $$True.$$2.%%2%%1%%15%%
+Which of the following is not a valid rule of Boolean algebra?%%(True or False) == True.$$not(a and b) == not(a) and not(b).$$(False and x) == False.$$(True or x) == True.%%2%%1%%15%%
+Placing a decision inside of another decision is an example of?%%Spooning.$$Cloning.$$Nesting.$$Procrastination.%%3%%1%%15%%
+The term for an operator that may not evaluate one of its subexpressions is%%Faulty.$$Short-circuit.$$Exclusive.$$Indefinite.%%2%%1%%15%%

@@ -59,6 +59,7 @@ class StartMenu():
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
         
+        #Buttons
         self.lessonButton = graphics.Button(screen, 560, 240, 967, 390, LESSON_LEVEL_SELECTION)
         self.quizButton = graphics.Button(screen, 206, 406, 543, 543, TRIVIA_LEVEL_SELECTION)
         self.creditsButton = graphics.Button(screen, 260, 316, 544, 379, CREDITS)
@@ -66,9 +67,11 @@ class StartMenu():
         self.soundButton = graphics.Button(screen, 930, 690, 980, 740, 0)
         self.exitButton = graphics.Button(screen, 990, 690, 1040, 740, 0)
         
+        #Sound
         self.soundObj = pygame.mixer.Sound("BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
         self.pushSound = pygame.mixer.Sound("Woosh.wav")
+        
         self.mouseIsDown = False
         
     def gameLoop(self):
@@ -86,6 +89,8 @@ class StartMenu():
             if event.type == pygame.QUIT:
                 quit = True
                 return True
+            
+            #Processes Mouse Events
             if event.type == pygame.MOUSEBUTTONDOWN :
                 self.mouseIsDown = True
                 if self.lessonButton.isPressed():
@@ -128,6 +133,8 @@ class StartMenu():
         self.screen.fill(BLACK)
         graphics.setBackground(self.screen, "Menu.jpg")
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
+        
+        #Rollover states for buttons
         if self.quizButton.isPressed():
             if self.mouseIsDown:
                 pressed = pygame.image.load("TriviaButton_Pressed.png").convert()
@@ -209,6 +216,8 @@ class InfoScreen():
             if event.type == pygame.QUIT:
                 quit = True
                 return True
+            
+            #Processes mouse events
             elif event.type == pygame.MOUSEBUTTONDOWN :
                 self.mouseIsDown = True
                 if self.backButton.isPressed():
@@ -236,7 +245,9 @@ class InfoScreen():
     def updateScreen(self):
         self.screen.fill(BLACK)
         graphics.setBackground(self.screen, self.screenImage)  
-        graphics.drawEssentialButtons(self.screen, self.soundButton.getState())        
+        graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
+        
+        #Rollover states for buttons
         if self.backButton.isPressed():
             if self.mouseIsDown:
                 pressed = pygame.image.load("Back_Pressed.png").convert()
@@ -308,6 +319,8 @@ class LevelSelectionMenu():
             if event.type == pygame.QUIT:
                 quit = True
                 return True
+            
+            #Processes mouse events
             elif event.type == pygame.MOUSEBUTTONDOWN :
                 self.mouseIsDown = True
                 for i in range(9):
@@ -338,7 +351,7 @@ class LevelSelectionMenu():
         graphics.setBackground(self.screen, "Level_Menu.png")
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
         
-        #event = pygame.event.poll()
+        #Processes button rollover states
         for i in range(len(self.level)):
             if self.level[i].isPressed():
                 if self.mouseIsDown:
@@ -427,6 +440,7 @@ class PlayQuiz():
                 done = True
                 quit = True
                 return done
+            #Processes mouse events
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 self.mouseIsDown = True
                 if self.exitButton.isPressed():
@@ -531,7 +545,7 @@ class PlayQuiz():
         graphics.printScore(self.screen, score)
         
         
-        
+        # Processes button rollover states
         if self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():
@@ -593,6 +607,8 @@ class PlayStory():
                 done = True
                 quit = True
                 return done
+            
+            #Processes mouse input
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 self.mouseIsDown = True
                 if self.exitButton.isPressed():
@@ -660,11 +676,8 @@ class PlayStory():
             except:
                 graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
                 graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter! (Press space to continue)", False, colour[beltIndex-1], lightColours)
-            
-              #Denotes the end of a chapter
-        #graphics.printScore(self.screen, score)
         
-        
+        # Processes button rollover states
         if self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():

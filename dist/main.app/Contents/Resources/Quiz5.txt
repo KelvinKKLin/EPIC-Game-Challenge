@@ -1,0 +1,15 @@
+What are objects (in programming)?%%Nouns$$Operations$$Data$$B and C%%4%%1%%9%%
+What do you need in order to display graphics?%%A graphics window$$A win object$$A GraphWin object$$A graphWin object%%3%%2%%9%%
+Which of the following would not make a good object?%%Marks$$Learn$$Student$$Professor%%2%%1%%9%%
+What is followed after the opening bracket in a constructor?%%Parameters$$Results$$The radius of a circle$$Nothing%%1%%1%%9%%
+What is a method or function?%%Data inside an object$$An operation$$A pre-made entity that allows the user to use an object$$The dot operator%%2%%1%%9%%
+Where is the orgin on a default GraphWin object?%%Bottom left hand corner$$Buttom right hand corner$$Top left hand corner$$Top right hand corner%%4%%1%%9%%
+Which of the following statements best describe the axis of a GraphWin object?%%x-axis increases right, y-axis increases to the up$$x-axis increases going left, y-axis increases going down$$x-axis increases going left, y-axis increases going up$$x-axis increases going right, y-axis increases going down%%4%%2%%15%%
+How do you set more intuitative coordinates for a GraphWin object?%%.makeEasier()$$.setCoords()$$.setCoordinates()$$.setGrid()%%2%%1%%9%%
+What kind of input can you get with the graphics.py library?%%Mouse clicks$$Textual input$$All of the above$$None of the above%%3%%1%%9%%
+What object do you need to get texual input?%%Entity$$Entireity$$Entry$$Entia%%3%%1%%9%%
+Which of the following is not a standard object to place in a GraphWin object?%%Circle$$Point$$Line$$Square%%4%%2%%9%%
+In Python, the set of types that share the * operator does not include%%unicode.$$float.$$long.$$None of the above.%%4%%1%%15%%
+The ASCII character scheme is suitable for representing the graphemes in%%Almost any writing system.$$English.$$Any Germanic or Romance language.$$All of the above.%%2%%1%%15%%
+In Python, the plus (+) operator is not valid for the type%%int.$$unicode.$$float.$$None of the above.%%4%%1%%15%%
+A successor to ASCII that includes characters from all written languages is%%ASCII++.$$Unicode.$$ISO.$$TELLY.%%2%%1%%15%%
