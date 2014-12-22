@@ -1,8 +1,34 @@
 In top down design, the main algorithm is written:%%Before the rest of the program is implemented$$After the rest of the program is implemented$$While the rest of the program is being implemented$$Varies based on project and team%%1%%2%%12%%
-Which of the following is the ideal software development process?%%Waterfall$$Spirial$$Prototype$$Top-Down Design%%1%%1%%9%%
+Which of the following is the ideal software development process?%%Waterfall$$Spiral$$Prototype$$Top-Down Design%%1%%1%%9%%
 What is the opposite of top-down design?%%East-West Design$$Bottom-up design$$Left-right design$$North-South Design%%2%%1%%9%%
 What is unit testing?%%Testing each product before it is released.$$Testing each sub-program independently of the whole program.$$Testing each program in equal intervals.$$Applying the same set of inputs to multiple programs that does the same thing.%%2%%2%%12%%
 What is top down design?%%Designing the top before the bottom.$$Designing a product with the final result in mind.$$Design a product by starting with the general problem and breaking it into smaller sub-categories.$$Designing a product from the top to the bottom.%%3%%2%%12%%
 Which of the following is rarely used in practice?%%Top-Down Design$$Bottom-up Implementation$$Waterfall$$Prototyping%%3%%1%%9%%
 What is design?%%The process of creating something.$$A form of science$$A form of art$$All of the above%%4%%1%%9%%
 What is the best way to learn about design?%%Professor Sensei$$Zelle's Python Programming Book$$ENGINEER 1D04 Labs, Lectures, and Tutorials$$Designing yourself%%4%%1%%9%%
+Placing a decision inside of another decision is an example of%%spooning.$$cloning.$$nesting.$$procrastination.%%3%%1%%15%%
+Which of the following loops need to be implemented as an indefinite loop?%%operating system loops.$$interactive loops.$$sentinel loops.$$All of the above.%%4%%1%%15%%
+What is searching?%%Looking for an item from a list$$Looking for a value from a text file$$Looking for an index in a string$$Looking for a particular value in a collection%%4%%1%%15%%
+Which of the following is not a way of searching?%%Binary Search$$Linear Search$$Selection Search$$None of the above%%3%%1%%12%%
+What is linear search?%%An O(n) algorithm$$Looking through every entry in a list to find the desired value$$Useful for unsorted lists$$All of the above%%4%%1%%15%%
+What is binary search?%%A O(log2(n)) algorithm$$A search algorithm that halves the size of the collection of values during each iteration$$An algorithm for sorted lists$$All of the above%%4%%1%%15%%
+What is big-O notation?%%A math formula$$A description of an algorithm's complexity$$An exponential/logarithmic graph$$None of the above%%2%%1%%15%%
+What is sorting?%%Arranging the list in a structured manner$$Finding a pattern within a collection of values$$Rearranging structured values in order to make searching more efficient$$All of the above%%1%%2%%15%%
+Which of the following is NOT a sorting algorithm?%%Binary sort$$Quick sort$$Bubble sort$$Merge sort%%1%%1%%12%%
+There is constant tension between:%%Efficiency and Memory$$Storage and Memory$$Clarity and Efficiency$$A Programmer and His/Her Supervisor%%3%%1%%12%%
+What is recursion?%%A type of loop$$Something that refers to itself$$A method that has a "self" parameter$$All of the above%%2%%2%%15%%
+Which of the following can be implemented using recursion?%%Bubble search$$Linear search$$Binary search$$None of the above%%3%%1%%12%%
+Which of the following can be implemented using recursion?%%Factorials$$Fibonacci's sequence$$The Tower of Hanoi$$All of the above%%4%%2%%15%%
+Recursive functions are:%%Finite$$Generalizations of loops$$More efficient than loops$$All of the above%%2%%1%%12%%
+Calling functions is generally:%%Faster than a loop$$The same as a loop$$Slower than a loop$$Better programming practice%%3%%3%%15%%
+When should you use recursion instead of a loop?%%Always$$Sometimes, depends on the situation$$Sometimes, when it is safer to do so$$Never%%2%%2%%15%%
+What is a core subfield of computer science?%%Analysis of algorithms$$Programming$$Python$$Engineering 1D04%%1%%1%%9%%
+Binary search is an example of:%%An ideal algorithm$$An approach to abstraction$$A divide and conquer approach to programming$$A sorted list%%3%%1%%12%%
+What is of the following is not a property a recursive function must have?%%There must be one or more base cases that do not require recursion$$A decision must be made$$All chains of recursion must eventually reach a base case$$None of the above%%4%%3%%12%%
+Recursion is ________ general than iteration.%%More$$Almost as$$A little more$$Less%%1%%2%%12%%
+Problems that are solvable in theory but not in practice are called:%%Unsolvable$$Impossible$$Intractable$$None of the above%%3%%1%%9%%
+Which of the following is in principle, impossible to solve?%%The Tower of Hanoi$$The Turing Machine$$The Halting Problem$$Pascal's Triangle%%3%%2%%12%%
+In which software development phase is pseudo-code useful?%%Design.$$Requirements specification.$$Testing and verification.$$Implementation.%%1%%1%%15%%
+Software engineering deals with the development of software products that are:%%Exist in multiple versions.$$Large or complex.$$Are built by teams. $$All of the above.%%4%%1%%15%%
+Which software development model is an idealization?%%Spiral.$$Incremental.$$Prototyping.$$Waterfall.%%4%%1%%15%%
+In which software development phase is input from the client crucial?%%Requirements specification.$$Implementation. $$Design.$$Testing and verification.%%1%%1%%15%%

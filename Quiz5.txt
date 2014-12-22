@@ -9,3 +9,7 @@ How do you set more intuitative coordinates for a GraphWin object?%%.makeEasier(
 What kind of input can you get with the graphics.py library?%%Mouse clicks$$Textual input$$All of the above$$None of the above%%3%%1%%9%%
 What object do you need to get texual input?%%Entity$$Entireity$$Entry$$Entia%%3%%1%%9%%
 Which of the following is not a standard object to place in a GraphWin object?%%Circle$$Point$$Line$$Square%%4%%2%%9%%
+In Python, the set of types that share the * operator does not include%%unicode.$$float.$$long.$$None of the above.%%4%%1%%15%%
+The ASCII character scheme is suitable for representing the graphemes in%%Almost any writing system.$$English.$$Any Germanic or Romance language.$$All of the above.%%2%%1%%15%%
+In Python, the plus (+) operator is not valid for the type%%int.$$unicode.$$float.$$None of the above.%%4%%1%%15%%
+A successor to ASCII that includes characters from all written languages is%%ASCII++.$$Unicode.$$ISO.$$TELLY.%%2%%1%%15%%

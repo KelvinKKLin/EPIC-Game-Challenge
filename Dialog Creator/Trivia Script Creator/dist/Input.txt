@@ -1,0 +1,51 @@
+1///What is the fundamental question of computer science?%%How fast can a computer compute?$$What is the most effective programming language?$$How much money can a programmer make?$$How much money can a programmer make?%%3%%1%%9%%
+2///If you double your computer’s memory, what effect does this have on the size of the maximum floating  point number (type float) you can represent in Python?%%No change.$$Approximately doubles the size of the maximum float.$$Exactly doubles the size of the maximum float.$$The maximum size is unchanged, but the precision of the type float is approximately doubled.%%1%%1%%15%%
+3///What is the result of the Python expression float(1/4)?%%0.249999999999$$0.0$$0.250000000001$$0.25%%2%%1%%15%%
+2///What is the type of 13 < 19?%%int.$$13.$$bool.$$True.%%3%%1%%15%%
+3///Matplotlib:%%Can be used to produce professional quality figures for inclusion in assignments and reports.$$Depends on having the numpy library installed.$$Is a library in Python that can be used for 2D plotting.$$All of the above.%%4%%1%%15%%
+3///Which of the following statements are not valid in Python? You can assume that any variables used  have been assigned a value of an admissible type and any libraries have been properly imported.%%s = "123" * "3".$$math.sqrt = abs.$$True = False.$$x = (x == 1).%%1%%1%%15%%
+2///Which of the following programs would not be naturally implemented following the input process  output design pattern?%%A program that takes the design of a structure and returns the forces inside the structural elements.$$A program that reads a table of values, calculates statistics on the values and outputs these  statistics.$$An operating system, like Windows, Linux or Max OS X.$$All of the above.%%3%%1%%15%%
+2///Which of the following are not used in expressions?%%operators.$$literals.$$statements.$$variables.%%3%%1%%15%%
+1///If you double your computer's memory, what effect does this have on the maximum floating point  number you can represent using the standard floating point numbers in Python?%%There is no change in the maximum.$$The magnitude of the maximum stays the same, but the precision of the representation increases.$$Doubles the maximum.$$Increases the maximum, but the specific results depend on the particular computer's architecture.%%1%%1%%15%%
+5///If you define a class to represent a car, what should the type be for the field that represents whether  the engine is on or off?%%object.$$float.$$long.$$bool.%%4%%1%%15%%
+2///Which of the following Python expressions is a literal?%%True.$$x.$$math.sqrt(2).$$int(3.14).%%1%%1%%15%%
+9///In which software development phase is pseudo-code useful?%%Design.$$Requirements specification.$$Testing and verification.$$Implementation.%%1%%1%%15%%
+5///In the graphics.py module used in the book, the getHeight method of an object of type GraphWin is  an example of a(n)%%Class.$$Accessor.$$Constructor.$$Type.%%2%%1%%15%%
+2///What numeric type in Python contains an infinite number of values?%%Complex.$$int.$$long.$$None of the above.%%3%%1%%15%%
+3///What is the type of 2 ** 100 in Python?%%float.$$long.$$int.$$complex.%%2%%1%%15%%
+13///A file with the extension .pyc normally contains%%Python constants.$$Python byte code.$$Python classes.$$Python code.%%2%%1%%15%%
+9///Which of the following phases in the software development process do all the other phases depend  upon?%%Implementation.$$Design.$$Testing and verification.$$Requirements specification.%%4%%1%%15%%
+5///GraphWin from Zelle's graphics module is the name of%%A template for a type of window objects.$$A class.$$A type of window objects.$$All of the above.%%4%%1%%15%%
+4///In Python, the set of types that share the * operator does not include%%unicode.$$float.$$long.$$None of the above.%%4%%1%%15%%
+4///The ASCII character scheme is suitable for representing the graphemes in%%Almost any writing system.$$English.$$Any Germanic or Romance language.$$All of the above.%%2%%1%%15%%
+5///In programming languages, an object's behavior is defined entirely by its%%Methods.$$Mutators.$$Fields.$$Accessors.%%1%%1%%15%%
+6///A method that changes the state of an object is called a(n)%%Mutator.$$Stator.$$Accessor.$$Constructor.%%1%%1%%15%%
+3///For which  Python type does the law of associativity fail for the + operator?%%str$$long$$float$$All of the above.%%3%%1%%15%%
+2///Which values in Python are mutable?%%Boolean values.$$Objects.$$Values of type int, long, or float.$$All of the above.%%2%%1%%15%%
+1///What is the theoretical value of a Turing machine?%%It facilitates understanding the limits of mechanical computation.$$It proves that Artificial Intelligence is possible.$$It provides a design for building very efficient computers.$$All of the above.%%1%%1%%15%%
+4///In Python, the plus (+) operator is not valid for the type%%int.$$unicode.$$float.$$None of the above.%%4%%1%%15%%
+2///Which of the following quantities are best represented by the mathematical type integer?%%Force of friction on a sliding object.$$Number of teeth on a gear.$$Velocity of a rocket.$$All of the above.%%2%%1%%15%%
+4///A successor to ASCII that includes characters from all written languages is%%ASCII++.$$Unicode.$$ISO.$$TELLY.%%2%%1%%15%%
+2///In Python, which of the following is a statement?%%1 = x.$$x == 1.$$1 == x.$$None of the above.%%4%%1%%15%%
+3///Which of the following types in Python represents rational numbers in scientific notation?%%float.$$long.$$long.$$int.%%1%%1%%15%%
+9///Software engineering deals with the development of software products that are:%%Exist in multiple versions.$$Large or complex.$$Are built by teams. $$All of the above.%%4%%1%%15%%
+5///The state of an object can be changed by%%Invoking its accessor methods.$$Invoking its mutator methods.$$Cloning the object.$$All of the above.%%2%%1%%15%%
+13///The Turing award is%%Named after Alan Turing.$$The highest distinction in Computer Science.$$The Nobel Prize of computing.$$All of the above.%%4%%1%%15%%
+7///Which of the following Python expressions evaluates to True no matter what the value of x is?%%True or x$$x or True$$True and x$$x and True%%1%%1%%15%%
+8///Placing a decision inside of another decision is an example of%%spooning.$$cloning.$$nesting.$$procrastination.%%3%%1%%15%%
+8///Which of the following loops need to be implemented as an indefinite loop?%%operating system loops.$$interactive loops.$$sentinel loops.$$All of the above.%%4%%1%%15%%
+9///Which software development model is the best to use when the problem to be solved is well understood?%%Spiral.$$Waterfall.$$Incremental.$$Prototyping.%%2%%1%%15%%
+7///Which of the following Python expressions evaluates to False no matter what the value of x?%%x or False.$$False and x.$$False or x.$$x and False.%%2%%1%%15%%
+9///Which software engineering principle involves the separation of what is important from what is irrele- vant?%%Abstraction.$$Least Privilege.$$Separation of Concerns.$$Anticipation of Change.%%1%%1%%15%%
+7///The boolean expression not(a and (not b)) is equivalent to%%(not a) and b.$$(not a) and (not b).$$(not a) or b.$$(not a) or (not b).%%3%%1%%15%%
+7///Which of the following people showed that logical operators behave like arithmetic operators?%%George Boole.$$Gottlieb Leibniz.$$Charles Babbage.$$Alan Turing.%%1%%1%%15%%
+6///An exception is most directly created in Python using%%A try-except statement.$$A raise statement.$$A return statement.$$A def statement.%%2%%1%%15%%
+9///Which software development model is an idealization that is almost never strictly followed in practice?%%Spiral.$$Incremental.$$Prototyping.$$Waterfall.%%4%%1%%15%%
+9///In which software development phase is input from the client crucial?%%Requirements specification.$$Implementation. $$Design.$$Testing and verification.%%1%%1%%15%%
+7///What is the value of the Python expression: 2 == (1 or 2 or 3)?%%1.$$False. $$True.$$2.%%2%%1%%15%%
+7///Which of the following is not a valid rule of Boolean algebra?%%(True or False) == True.$$not(a and b) == not(a) and not(b).$$(False and x) == False.$$(True or x) == True.%%2%%1%%15%%
+9///Test cases are selected to cover the behavior of code based on only the specification of the code in%%Blackbox testing.$$Wild random testing.$$Statistical random testing.$$All of the above.%%1%%1%%15%%
+6///Which of the following is not a step in the function calling process?%%The formal parameters are assigned the value of the actual parameters.$$The calling program suspends.$$Control returns to the point just before the function was called.$$The body of the function executes.%%3%%1%%15%%
+7///Placing a decision inside of another decision is an example of?%%Spooning.$$Cloning.$$Nesting.$$Procrastination.%%3%%1%%15%%
+7///The term for an operator that may not evaluate one of its subexpressions is%%Faulty.$$Short-circuit.$$Exclusive.$$Indefinite.%%2%%1%%15%%
+2///Which of the following Python expressions is a literal?%%3 >= 7.$$1+2.$$True and "".$$"horse".%%4%%1%%15%%

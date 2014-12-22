@@ -1,9 +1,7 @@
-Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Welcome back, young one.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%You are almost at the end, of the beginning of your programming journey, but before that, I have one final lesson for you.%%0%%0
-Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Today, we will be learning about Algorithms and Recursion.%%0%%0
-Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Now, before we get started, let's first think back to when you were a white belt programmer, and everything you've learned until now.%%0%%0
+Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Last but not least, we will be learning about Algorithms and Recursion.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%All right, let's get started.%%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will begin by looking at a concept called searching. Searching in all its esscence is looking through a collection of data like a list.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will begin by looking at a concept called searching. Searching in all its essence is looking through a collection of data like a list.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%We will be examining two ways of searching: binary search, linear search. Study these well, young one, as they will be vital skills you need as a programmer.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Let's start with binary search. First, imagine a sorted list like this one: [1, 3, 5, 7, 9]. We want to find a certain value, let's say, 9. %%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%So we start looking by going to the center of the list. We find the value 5 is at the center.%%0%%0
@@ -50,7 +48,7 @@ Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%With binary sea
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%On the other hand, with linear search, you are looking at every item in the list. That means that the program has a complexity of N. Adding 1 item to the list would increase the maximum number of searches required to search through the list by 1.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%To put that in perspective, adding 1024 items to a sorted list would increase the maximum number of binary searches required by 10, while it would increase the maximum number of linear searches required by 1024. %%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%This means that it would take linear search a lot longer to execute with large sorted lists, than binary search.%%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%However, with small lists, both searches are almost instaneous, and the efficency would not matter much.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%However, with small lists, both searches are almost instantaneous, and the efficiency would not matter much.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, you may be wondering, if binary search is so much more efficient, why don't we sort large lists first, before searching. That way, we could always use binary search, and avoid linear search all together.%%0%%0
 Blackboard.jpg%%Sensei_Sad.png%%Sensei.png%%Professor Sensei%%The truth is, young one, that life is never that simple. Sorting itself is a time intensive process, and with large lists such as databases, new data is added all the time. In that case, it may be more efficient to leave the list unsorted and to just use linear search.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%But, if you really insist, I will teach you how to sort.%%0%%0
@@ -83,17 +81,17 @@ Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%There are three
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Each element is compared with the pivot, and if it is smaller than the pivot, it is placed to the left of the wall. Otherwise, if it is greater than the pivot, then the element is placed to the right of the wall.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Then the program repeats the previous algorithm, each time splitting the array into smaller arrays until there is a single array.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, you may be wondering, what is the value of quick sort?%%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, in theory, the efficienchy of quick sort is N-squared, however, because the pivot is randomly selected within each sub array, it behaves more like an N-log-N algorithm.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, in theory, the efficiency of quick sort is N-squared, however, because the pivot is randomly selected within each sub array, it behaves more like an N-log-N algorithm.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%That's super fast!%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, before you graduate from Python Programming, there is one more concept you need to know: recursion.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Recursion is a form of iteration where a method calls itself. %%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%There are two conditions to recursion: %%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%One, there must be at least one base case, where no recursion is required. In otherwords, the function simply returns a value.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%One, there must be at least one base case, where no recursion is required. In other words, the function simply returns a value.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%And two, all chains of recursion must eventually arrive at a base case. Otherwise, it would be pointless, as the program would never end.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Now, recursion is simply another type of iteration, just like a loop.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Which one's faster you ask?%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Well, they're both the same in terms of speed, so just think of recursion as another tool you could use for programming.%%0%%0
 Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%In some cases, recursion can make your code cleaner, whereas in other cases, it makes your code more complicated.%%0%%0
-Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Some things you can implement with recursion include binary search, quick sort, the fibbonaci sequenvce, the Tower of Hanoi, pathfinding, and many others.%%0%%0
+Blackboard.jpg%%Sensei_Nutral.png%%Sensei.png%%Professor Sensei%%Some things you can implement with recursion include binary search, quick sort, the Fibonacci sequence, the Tower of Hanoi, pathfinding, and many others.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%Well, young one, you have now grown up into quite the proficient programmer.%%0%%0
 Blackboard.jpg%%Sensei_Happy.png%%Sensei.png%%Professor Sensei%%That is all I have to teach you. Congratulations for learning to program in Python (and enjoy the Christmas Break!)%%0%%0

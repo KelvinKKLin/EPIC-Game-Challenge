@@ -8,3 +8,13 @@ Which of the following is part of the math library?%%max()$$range()$$random()$$p
 Which numerical data type could lead to inaccuracies in calculations?%%Ints$$Floats$$Longs$$None of the above%%2%%2%%9%%
 How many positive numbers can an int hold?%%2**32$$(2**32)/2$$((2**32)/2) - 1$$None of the above%%3%%2%%15%%
 What does str(n) do?%%It converts the variable n into a string.$$It yields an error$$It depends on the value of n$$None of the above%%3%%2%%9%%
+If you double your computer's memory, it:%%Would have no change.$$Would approximately doubles the size of the maximum float.$$Would exactly double the size of the maximum float.$$Would double the precision of floats%%1%%1%%15%%
+What is the type of 13 < 19?%%int.$$13.$$bool.$$True.%%3%%1%%15%%
+Which of the following would not be naturally implemented using the IPO design pattern?%%A program that takes the design of a structure and returns the forces inside the structural elements.$$A program that reads a table of values, calculates statistics on the values and outputs these  statistics.$$An operating system, like Windows, Linux or Max OS X.$$All of the above.%%3%%1%%15%%
+Which of the following are not used in expressions?%%operators.$$literals.$$statements.$$variables.%%3%%1%%15%%
+Which of the following Python expressions is a literal?%%True.$$x.$$math.sqrt(2).$$int(3.14).%%1%%1%%15%%
+What numeric type in Python contains an infinite number of values?%%Complex.$$int.$$long.$$None of the above.%%3%%1%%15%%
+Which values in Python are mutable?%%Boolean values.$$Objects.$$Values of type int, long, or float.$$All of the above.%%2%%1%%15%%
+Which of the following quantities are best represented by the mathematical type integer?%%Force of friction on a sliding object.$$Number of teeth on a gear.$$Velocity of a rocket.$$All of the above.%%2%%1%%15%%
+In Python, which of the following is a statement?%%1 = x.$$x == 1.$$1 == x.$$None of the above.%%4%%1%%15%%
+Which of the following Python expressions is a literal?%%3 >= 7.$$1+2.$$True and "".$$"horse".%%4%%1%%15%%

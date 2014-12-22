@@ -8,3 +8,16 @@ What is error handling?%%Black and white box testing$$Making sure your program i
 What structure is used for error handling?%%Try-except-finally$$If-elif-else$$Do-while$$All of the above%%1%%1%%9%%
 Which of the following is not a valid except header?%%except:$$except TypeError:$$except YoloError:$$excpet #tableError:%%4%%2%%12%%
 Which of the following is a valid else header?%%else:$$els:$$else do:$$None of the above%%1%%1%%9%%
+A method that changes the state of an object is called a(n)%%Mutator.$$Stator.$$Accessor.$$Constructor.%%1%%1%%15%%
+An exception is most directly created in Python using%%A try-except statement.$$A raise statement.$$A return statement.$$A def statement.%%2%%1%%15%%
+Which of the following is not a step in the function calling process?%%The formal parameters are assigned the value of the actual parameters.$$The calling program suspends.$$Control returns to the point just before the function was called.$$The body of the function executes.%%3%%1%%15%%
+What does an object NOT consist of?%%A class$$A collection of related information$$A set of perations to manipulate that information$$None of the above%%1%%1%%15%%
+Information in an object is stored in: __________?%%Scope Variables$$Instance Variables$$Local Variables$$Private Variables%%2%%1%%12%%
+Which of the following would not be an appropriate object?%%Physics$$Particles$$Velocity$$More than one of the above%%3%%2%%15%%
+How do you create a Circle object from graphics.py?%%c = Circle()$$c = Circle([3, 3], 5)$$c = Circle(Point(3, 4), 5)$$None of the above%%3%%1%%18%%
+What is the constructor called in Python?%%_init(self)_$$_initialize(self)_$$__init(self)__$$__initialize(self)__%%3%%1%%12%%
+What is encapsulation?%%Information hiding$$Abstraction$$Using accessors and mutators$$All of the above%%4%%2%%15%%
+Every object is a(n) _________ of a class.%%Copy$$Instance$$Blueprint$$Manifestation%%2%%2%%9%%
+What is abstraction?%%Information hiding$$Focusing on what is relevant$$Using getters and setters$$A form of art%%2%%3%%12%%
+What programming paradigm involves the use of objects?%%OOB$$OOD$$OOP$$OOC%%3%%1%%9%%
+What do GUIs consist of?%%Objects$$Classes$$Instances$$Scope variables%%1%%2%%12%%

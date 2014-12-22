@@ -8,3 +8,5 @@ How do you get input from the user?%%variable = input("Enter prompt here")$$get 
 Which of the following is a valid for loop header?%%For i in Python:$$for i in Python:$$For i in Python():$$for i in Python():%%2%%2%%15%%
 Which of the following is iterateable?%%Strings$$Lists$$Floats$$1 and 2%%4%%1%%9%%
 What does range(n) do?%%Generates a list of numbers from 0 to n-1$$Generates an error$$Loops a for loop n numbers of times$$1, 2, or 3 depending on the circumstance%%1%%2%%15%%
+What is the fundamental question of computer science?%%How fast can a computer compute?$$What is the most effective programming language?$$How much money can a programmer make?$$How much money can a programmer make?%%3%%1%%9%%
+What is the theoretical value of a Turing machine?%%It facilitates understanding the limits of mechanical computation.$$It proves that Artificial Intelligence is possible.$$It provides a design for building very efficient computers.$$All of the above.%%1%%1%%15%%

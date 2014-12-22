@@ -14,3 +14,11 @@ Evaluate 1 and 0 and (3/0) and math.sqrt(-30)%%Either 1 or 0$$Either True or Fal
 Evaluate 1 or 0 and (3/0) and math.sqrt(-30)%%Either 1 or 0$$Either True or False$$Error: Cannot divide by 0$$Error: Cannot take square root of a negative number%%1%%2%%15%%
 What is not(3!=4)%%True$$False$$3$$0%%2%%1%%9%%
 What is the relational operator for "Equals to"?%%=$$==$$.equals()$$None of the above%%2%%1%%9%%
+Which of the following Python expressions evaluates to True no matter what the value of x is?%%True or x$$x or True$$True and x$$x and True%%1%%1%%15%%
+Which of the following Python expressions evaluates to False no matter what the value of x?%%x or False.$$False and x.$$False or x.$$x and False.%%2%%1%%15%%
+The boolean expression not(a and (not b)) is equivalent to%%(not a) and b.$$(not a) and (not b).$$(not a) or b.$$(not a) or (not b).%%3%%1%%15%%
+Which of the following people showed that logical operators behave like arithmetic operators?%%George Boole.$$Gottlieb Leibniz.$$Charles Babbage.$$Alan Turing.%%1%%1%%15%%
+What is the value of the Python expression: 2 == (1 or 2 or 3)?%%1.$$False. $$True.$$2.%%2%%1%%15%%
+Which of the following is not a valid rule of Boolean algebra?%%(True or False) == True.$$not(a and b) == not(a) and not(b).$$(False and x) == False.$$(True or x) == True.%%2%%1%%15%%
+Placing a decision inside of another decision is an example of?%%Spooning.$$Cloning.$$Nesting.$$Procrastination.%%3%%1%%15%%
+The term for an operator that may not evaluate one of its subexpressions is%%Faulty.$$Short-circuit.$$Exclusive.$$Indefinite.%%2%%1%%15%%

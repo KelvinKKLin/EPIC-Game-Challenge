@@ -501,7 +501,7 @@ class PlayQuiz():
         graphics.setBackground(self.screen, "Blackboard.jpg")
         
         
-        graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/1.75)), 100)
+        graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/3.5)), 100)
         graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
         
         
@@ -527,7 +527,7 @@ class PlayQuiz():
                 timer = 0
     
         else:
-            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False, colour[beltIndex -1], lightColours)  #Denotes the end of a chapter
+            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have a total score of " + str(score) + " out of " + str(sum(map(int, self.scoreList))) + ".", False, colour[beltIndex -1], lightColours)  #Denotes the end of a chapter
         graphics.printScore(self.screen, score)
         
         
