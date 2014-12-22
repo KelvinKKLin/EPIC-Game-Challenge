@@ -2,6 +2,7 @@
 
 ''' 
 This is the main loop for the program.
+TODO: Implement game
 '''
 
 import pygame
@@ -29,8 +30,6 @@ LESSON = 1
 TRIVIA = 2
 LESSON_LEVEL_SELECTION = 3
 TRIVIA_LEVEL_SELECTION = 4
-INSTRUCTIONS = 5
-CREDITS = 6
 
 #User Defined Events
 TIMER = 25
@@ -59,8 +58,6 @@ class StartMenu():
         self.clock = pygame.time.Clock()
         self.lessonButton = graphics.Button(screen, 560, 240, 967, 390, LESSON_LEVEL_SELECTION)
         self.quizButton = graphics.Button(screen, 206, 406, 543, 543, TRIVIA_LEVEL_SELECTION)
-        self.creditsButton = graphics.Button(screen, 260, 316, 544, 379, CREDITS)
-        self.instructionsButton = graphics.Button(screen, 560, 410, 845, 475, INSTRUCTIONS)
         self.soundObj = pygame.mixer.Sound("BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
         self.pushSound = pygame.mixer.Sound("Woosh.wav")
@@ -92,16 +89,9 @@ class StartMenu():
                     self.pushSound.play()
                     self.soundObj.fadeout(3000)
                     state = self.quizButton.getState()
-                elif self.instructionsButton.isPressed():
-                    self.pushSound.play()
-                    self.soundObj.fadeout(3000)
-                    state = self.instructionsButton.getState()
-                elif self.creditsButton.isPressed():
-                    self.pushSound.play()
-                    self.soundObj.fadeout(3000)
-                    state = self.creditsButton.getState()
             else:
                 self.mouseIsDown = False
+                    
         return state != MAIN_MENU
     
     
@@ -109,6 +99,7 @@ class StartMenu():
     def updateScreen(self):
         self.screen.fill(BLACK)
         graphics.setBackground(self.screen, "Menu.png")
+        
         if self.quizButton.isPressed():
             if self.mouseIsDown:
                 pressed = pygame.image.load("TriviaButton_Pressed.png").convert()
@@ -122,76 +113,9 @@ class StartMenu():
                 self.screen.blit(pressed, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])    
             else:
                 hover = pygame.image.load("StoryButton_Hover.png").convert()
-                self.screen.blit(hover, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])  
-        elif self.instructionsButton.isPressed():
-            if self.mouseIsDown:
-                pressed = pygame.image.load("HowToPlayButton_Pressed.png").convert()
-                self.screen.blit(pressed, [self.instructionsButton.getX()[0], self.instructionsButton.getY()[0]])
-            else:
-                hover = pygame.image.load("HowToPlayButton_Hover.png").convert()
-                self.screen.blit(hover, [self.instructionsButton.getX()[0]+1, self.instructionsButton.getY()[0]-2])
-        elif self.creditsButton.isPressed():
-            if self.mouseIsDown:
-                pressed = pygame.image.load("AboutUsButton_Pressed.png").convert()
-                self.screen.blit(pressed, [self.creditsButton.getX()[0], self.creditsButton.getY()[0]])
-            else:
-                hover = pygame.image.load("AboutUsButton_Hover.png").convert()
-                self.screen.blit(hover, [self.creditsButton.getX()[0], self.creditsButton.getY()[0]-0.5])        
+                self.screen.blit(hover, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])             
             
         pygame.display.flip()
-
-class InfoScreen():
-    def __init__(self, screen, screenImage, currentState, bg_colour = BLACK):
-        self.screen = screen
-        self.screenImage = screenImage
-        self.currentState = currentState
-        self.bg_colour = bg_colour
-        self.clock = pygame.time.Clock()
-        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
-        self.soundObj.play(-1, fade_ms=2000)
-        self.backButton = graphics.Button(self.screen, 318, 566, 604, 633, MAIN_MENU)
-        self.mouseIsDown = False
-        
-    def gameLoop(self):
-        done = False
-        clock = pygame.time.Clock()
-        while not done:
-            self.updateScreen()
-            done = self.processEvents()
-            clock.tick(60)
-                
-    #Processes user inputs
-    def processEvents(self):
-        global state, quit
-        
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                quit = True
-                return True
-            elif event.type == pygame.MOUSEBUTTONDOWN :
-                self.mouseIsDown = True
-                if self.backButton.isPressed():
-                    pushSound = pygame.mixer.Sound("Woosh.wav")
-                    pushSound.play()                        
-                    self.soundObj.fadeout(3000)    
-                    state = self.backButton.getState()
-            else:
-                self.mouseIsDown = False
-        return state != self.currentState
-    
-    
-    #Updates the screen
-    def updateScreen(self):
-        self.screen.fill(BLACK)
-        graphics.setBackground(self.screen, self.screenImage)  
-        if self.backButton.isPressed():
-            if self.mouseIsDown:
-                pressed = pygame.image.load("Back_Pressed.png").convert()
-                self.screen.blit(pressed, [self.backButton.getX()[0],self.backButton.getY()[0]])    
-            else:
-                hover = pygame.image.load("Back_Hover.png").convert()
-                self.screen.blit(hover, [self.backButton.getX()[0],self.backButton.getY()[0]])        
-        pygame.display.flip()    
         
 class LevelSelectionMenu():
     def __init__(self, screen, typeOfMenu, nextState, bg_colour = BLACK):
@@ -232,7 +156,7 @@ class LevelSelectionMenu():
             if event.type == pygame.QUIT:
                 quit = True
                 return True
-            elif event.type == pygame.MOUSEBUTTONDOWN :
+            if event.type == pygame.MOUSEBUTTONDOWN :
                 self.mouseIsDown = True
                 for i in range(9):
                     if self.level[i].isPressed():
@@ -487,7 +411,7 @@ class PlayStory():
             graphics.setBackground(self.screen, self.backgroundPictureList[lineNumber-1])
             graphics.setCharacter(self.screen, self.foregroundPictureList[lineNumber-1], int(((self.screen.get_width())/3.5)), 100)
             graphics.drawDialogBox(self.screen, colour[beltIndex], 0.65)            
-            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter! (Press space to continue)", False, colour[beltIndex], lightColours)  #Denotes the end of a chapter
+            graphics.displayDialog(self.screen, "The End.", "Congratulations! You have reached the end of this chapter!", False, colour[beltIndex], lightColours)  #Denotes the end of a chapter
         #graphics.printScore(self.screen, score)
         pygame.display.flip()    
         
@@ -511,12 +435,6 @@ def main():
         elif state == LESSON:
             lessonGame = PlayStory(screen)
             lessonGame.gameLoop()
-        elif state == INSTRUCTIONS:
-            instructions = InfoScreen(screen, "HowToPlay_Instructions.png", INSTRUCTIONS)
-            instructions.gameLoop()
-        elif state == CREDITS:
-            credits = InfoScreen(screen, "AboutUs_Credits.png", CREDITS)
-            credits.gameLoop()
     pygame.quit()
     print "Done"
 
