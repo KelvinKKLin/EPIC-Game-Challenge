@@ -9,27 +9,33 @@ Welcome to Project Kanon! Project Kanon is a student run team consisting of dedi
 
 Your machine should also have python 2.7 installed on it. Installers for python itself can be found at http://www.python.org
 
-=== INSTRUCTIONS ===
+INSTRUCTIONS:
+===================
 
 In order to play open the "main.py" file and click on the "Run" menu, then the "Run Module" button. 
 
-=== TROUBLESHOOTING ===
-Game isn't running? 
->> Make sure Python 2.7 and Pygame 1.9 are installed on your computer
-
-
-=== CREDITS ===
+CREDITS:
+===================
 
 Kelvin Lin - Lead Programmer and Story Developer
+
 Shreyas Gangwani - Lead Artist and Character Designer
+
 Edwin Lin - Lead Data Administrator and General Artist
 
-Special thanks goes to Professor Dr. Farmer and Dr. Smith for providing past midterm questions for use in this game
-Special thanks goes to John Zelle for his awesome textbook and his multiple choice questions
+Special thanks goes to Professor Dr. Farmer and Dr. Smith for providing past midterm questions for use in this game.
+
+Special thanks goes to John Zelle for his awesome textbook and his multiple choice questions.
+
 Special thanks goes to Mustafa Haddara, whose README.TXT file inspired this read me file. 
+
 Special thanks goes to Mark Diangelo, Mike Keonig, and PlayOnLoop.com for the sound effects which are licenced under a CC-BY 3.0 license. A copy of such license can be found at: https://creativecommons.org/licenses/by/3.0/
+
 Special thanks goes to Corscia for sound effects that are licenced under a Sampling Plus 1.0 License. A copy of such license can be found here: http://creativecommons.org/licenses/sampling+/1.0/
+
 Special thanks goes out to Kanon Nakagawa for inspiration and for her amazing songs that lead the development team through
  the late hours of the night.
+
 And last but not least, special thanks goes out to Jamie Counsell, Graeme Crawley, and everyone else who supported 
 Project Kanon along the way!
+
