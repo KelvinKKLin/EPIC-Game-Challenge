@@ -1,7 +1,7 @@
-Project Kanon's For i in Python!
+For i in Python!
 ===================
 
-Welcome to Project Kanon! Project Kanon is a student run team consisting of dedicated game developers and programmers who are interested in creating an interactive and appealing game for students to learn programming. All our code is open-source, and made free of charge, so feel free to download a copy of our code to use it in your own project.
+Welcome to For i in Python! For i in Python is a student run team consisting of dedicated game developers and programmers who are interested in creating an interactive and appealing game for students to learn programming. All our code is open-source, and made free of charge, so feel free to download a copy of our code to use it in your own project.
 
 *** IN ORDER TO RUN THIS GAME YOU MUST FIRST INSTALL PYGAME. Appropriate installers can be found at http://www.pygame.org *** 
 
@@ -32,5 +32,5 @@ Special thanks goes to Mark Diangelo, Mike Keonig, and PlayOnLoop.com for the so
 Special thanks goes to Corscia for sound effects that are licenced under a Sampling Plus 1.0 License. A copy of such license can be found here: http://creativecommons.org/licenses/sampling+/1.0/ the late hours of the night.
 
 And last but not least, special thanks goes out to Jamie Counsell, Graeme Crawley, and everyone else who supported 
-Project Kanon along the way!
+For i in Python along the way!
 
