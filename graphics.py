@@ -115,7 +115,7 @@ def displayDialog(screen, characterName, text, isASelection, currentBeltColour, 
 #Draws a selection box around the selected item
 def drawSelection(screen, selection):
     
-    #Constants - TODO: Enumerate all the constants into one file.
+    #Constants
     nameHeightDisplacement = 255
     dialogHeightDisplacement = 215
     widthDisplacement = 1025       
@@ -138,11 +138,11 @@ def drawSelection(screen, selection):
             pygame.draw.rect(screen, colour, rectangularAttributes, 1)      
             
 def drawEssentialButtons(screen, isMute):
-    exit = pygame.image.load("exit.png").convert()
+    exit = pygame.image.load("./assets/images/exit.png").convert()
     screen.blit(exit, [990, 690])
     if isMute:
-        volume = pygame.image.load("volume.png").convert()
+        volume = pygame.image.load("./assets/images/volume.png").convert()
         screen.blit(volume, [930, 690])
     else:
-        mute = pygame.image.load("mute.png").convert()
+        mute = pygame.image.load("./assets/images/mute.png").convert()
         screen.blit(mute, [930, 690])

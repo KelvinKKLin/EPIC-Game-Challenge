@@ -68,9 +68,9 @@ class StartMenu():
         self.exitButton = graphics.Button(screen, 990, 690, 1040, 740, 0)
         
         #Sound
-        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
+        self.soundObj = pygame.mixer.Sound("./assets/sounds/BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
-        self.pushSound = pygame.mixer.Sound("Woosh.wav")
+        self.pushSound = pygame.mixer.Sound("./assets/sounds/Woosh.wav")
         
         self.mouseIsDown = False
         
@@ -131,57 +131,57 @@ class StartMenu():
     #Updates the screen
     def updateScreen(self):
         self.screen.fill(BLACK)
-        graphics.setBackground(self.screen, "Menu.jpg")
+        graphics.setBackground(self.screen, "./assets/images/Menu.jpg")
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
         
         #Rollover states for buttons
         if self.quizButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("TriviaButton_Pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/TriviaButton_Pressed.png").convert()
                 self.screen.blit(pressed, [self.quizButton.getX()[0]-2,self.quizButton.getY()[0]-2])    
             else:
-                hover = pygame.image.load("TriviaButton_Hover.png").convert()
+                hover = pygame.image.load("./assets/images/TriviaButton_Hover.png").convert()
                 self.screen.blit(hover, [self.quizButton.getX()[0]-2,self.quizButton.getY()[0]-2])         
         elif self.lessonButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("StoryButton_Pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/StoryButton_Pressed.png").convert()
                 self.screen.blit(pressed, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])    
             else:
-                hover = pygame.image.load("StoryButton_Hover.png").convert()
+                hover = pygame.image.load("./assets/images/StoryButton_Hover.png").convert()
                 self.screen.blit(hover, [self.lessonButton.getX()[0],self.lessonButton.getY()[0]])  
         elif self.instructionsButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("HowToPlayButton_Pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/HowToPlayButton_Pressed.png").convert()
                 self.screen.blit(pressed, [self.instructionsButton.getX()[0], self.instructionsButton.getY()[0]])
             else:
-                hover = pygame.image.load("HowToPlayButton_Hover.png").convert()
+                hover = pygame.image.load("./assets/images/HowToPlayButton_Hover.png").convert()
                 self.screen.blit(hover, [self.instructionsButton.getX()[0]+1, self.instructionsButton.getY()[0]-2])
         elif self.creditsButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("AboutUsButton_Pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/AboutUsButton_Pressed.png").convert()
                 self.screen.blit(pressed, [self.creditsButton.getX()[0], self.creditsButton.getY()[0]])
             else:
-                hover = pygame.image.load("AboutUsButton_Hover.png").convert()
+                hover = pygame.image.load("./assets/images/AboutUsButton_Hover.png").convert()
                 self.screen.blit(hover, [self.creditsButton.getX()[0], self.creditsButton.getY()[0]-0.5]) 
         elif self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():
-                    pressed = pygame.image.load("volume_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/volume_pressed.png").convert()
                 else:
-                    pressed = pygame.image.load("mute_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/mute_pressed.png").convert()
                 self.screen.blit(pressed, [self.soundButton.getX()[0], self.soundButton.getY()[0]])
             else:
                 if self.soundButton.getState():
-                    hover = pygame.image.load("volume_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/volume_hover.png").convert()
                 else:
-                    hover = pygame.image.load("mute_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/mute_hover.png").convert()
                 self.screen.blit(hover, [self.soundButton.getX()[0], self.soundButton.getY()[0]-0.5]) 
         elif self.exitButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("exit_pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/exit_pressed.png").convert()
                 self.screen.blit(pressed, [self.exitButton.getX()[0], self.exitButton.getY()[0]])
             else:
-                hover = pygame.image.load("exit_hover.png").convert()
+                hover = pygame.image.load("./assets/images/exit_hover.png").convert()
                 self.screen.blit(hover, [self.exitButton.getX()[0], self.exitButton.getY()[0]-0.5]) 
             
         pygame.display.flip()
@@ -193,7 +193,7 @@ class InfoScreen():
         self.currentState = currentState
         self.bg_colour = bg_colour
         self.clock = pygame.time.Clock()
-        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
+        self.soundObj = pygame.mixer.Sound("./assets/sounds/BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)
         self.backButton = graphics.Button(self.screen, 318, 566, 604, 633, MAIN_MENU)
         self.soundButton = graphics.Button(screen, 930, 690, 980, 740, 0)
@@ -221,7 +221,7 @@ class InfoScreen():
             elif event.type == pygame.MOUSEBUTTONDOWN :
                 self.mouseIsDown = True
                 if self.backButton.isPressed():
-                    pushSound = pygame.mixer.Sound("Woosh.wav")
+                    pushSound = pygame.mixer.Sound("./assets/sounds/Woosh.wav")
                     pushSound.play()                        
                     self.soundObj.fadeout(3000)    
                     state = self.backButton.getState()
@@ -250,30 +250,30 @@ class InfoScreen():
         #Rollover states for buttons
         if self.backButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("Back_Pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/Back_Pressed.png").convert()
                 self.screen.blit(pressed, [self.backButton.getX()[0],self.backButton.getY()[0]])    
             else:
-                hover = pygame.image.load("Back_Hover.png").convert()
+                hover = pygame.image.load("./assets/images/Back_Hover.png").convert()
                 self.screen.blit(hover, [self.backButton.getX()[0],self.backButton.getY()[0]])  
         elif self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():
-                    pressed = pygame.image.load("volume_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/volume_pressed.png").convert()
                 else:
-                    pressed = pygame.image.load("mute_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/mute_pressed.png").convert()
                 self.screen.blit(pressed, [self.soundButton.getX()[0], self.soundButton.getY()[0]])
             else:
                 if self.soundButton.getState():
-                    hover = pygame.image.load("volume_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/volume_hover.png").convert()
                 else:
-                    hover = pygame.image.load("mute_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/mute_hover.png").convert()
                 self.screen.blit(hover, [self.soundButton.getX()[0], self.soundButton.getY()[0]-0.5]) 
         elif self.exitButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("exit_pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/exit_pressed.png").convert()
                 self.screen.blit(pressed, [self.exitButton.getX()[0], self.exitButton.getY()[0]])
             else:
-                hover = pygame.image.load("exit_hover.png").convert()
+                hover = pygame.image.load("./assets/images/exit_hover.png").convert()
                 self.screen.blit(hover, [self.exitButton.getX()[0], self.exitButton.getY()[0]-0.5])    
                 
         pygame.display.flip()    
@@ -286,7 +286,7 @@ class LevelSelectionMenu():
         self.typeOfMenu = typeOfMenu
         self.soundButton = graphics.Button(screen, 930, 690, 980, 740, 0)
         self.exitButton = graphics.Button(screen, 990, 690, 1040, 740, 0)        
-        self.soundObj = pygame.mixer.Sound("BabySteps.wav")
+        self.soundObj = pygame.mixer.Sound("./assets/sounds/BabySteps.wav")
         self.soundObj.play(-1, fade_ms=2000)         
         self.mouseIsDown = False
         
@@ -325,7 +325,7 @@ class LevelSelectionMenu():
                 self.mouseIsDown = True
                 for i in range(9):
                     if self.level[i].isPressed():
-                        pushSound = pygame.mixer.Sound("Woosh.wav")
+                        pushSound = pygame.mixer.Sound("./assets/sounds/Woosh.wav")
                         pushSound.play()                        
                         self.soundObj.fadeout(3000)
                         state = self.level[i].getState()
@@ -348,37 +348,37 @@ class LevelSelectionMenu():
     #Updates the screen
     def updateScreen(self):
         self.screen.fill(BLACK)
-        graphics.setBackground(self.screen, "Level_Menu.png")
+        graphics.setBackground(self.screen, "./assets/images/Level_Menu.png")
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
         
         #Processes button rollover states
         for i in range(len(self.level)):
             if self.level[i].isPressed():
                 if self.mouseIsDown:
-                    pressed = pygame.image.load(str(i+1) + "_Pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/"+ str(i+1) + "_Pressed.png").convert()
                     self.screen.blit(pressed, [self.level[i].getX()[0],self.level[i].getY()[0]])    
                 else:
-                    hover = pygame.image.load(str(i+1) + "_Hover.png").convert()
+                    hover = pygame.image.load("./assets/images/"+str(i+1) + "_Hover.png").convert()
                     self.screen.blit(hover, [self.level[i].getX()[0]-2,self.level[i].getY()[0]-2]) 
             elif self.soundButton.isPressed():
                 if self.mouseIsDown:
                     if self.soundButton.getState():
-                        pressed = pygame.image.load("volume_pressed.png").convert()
+                        pressed = pygame.image.load("./assets/images/volume_pressed.png").convert()
                     else:
-                        pressed = pygame.image.load("mute_pressed.png").convert()
+                        pressed = pygame.image.load("./assets/images/mute_pressed.png").convert()
                     self.screen.blit(pressed, [self.soundButton.getX()[0], self.soundButton.getY()[0]])
                 else:
                     if self.soundButton.getState():
-                        hover = pygame.image.load("volume_hover.png").convert()
+                        hover = pygame.image.load("./assets/images/volume_hover.png").convert()
                     else:
-                        hover = pygame.image.load("mute_hover.png").convert()
+                        hover = pygame.image.load("./assets/images/mute_hover.png").convert()
                     self.screen.blit(hover, [self.soundButton.getX()[0], self.soundButton.getY()[0]-0.5]) 
             elif self.exitButton.isPressed():
                 if self.mouseIsDown:
-                    pressed = pygame.image.load("exit_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/exit_pressed.png").convert()
                     self.screen.blit(pressed, [self.exitButton.getX()[0], self.exitButton.getY()[0]])
                 else:
-                    hover = pygame.image.load("exit_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/exit_hover.png").convert()
                     self.screen.blit(hover, [self.exitButton.getX()[0], self.exitButton.getY()[0]-0.5])        
         
         pygame.display.flip()
@@ -390,18 +390,18 @@ class PlayQuiz():
     def __init__(self, screen, bg_colour = BLACK):
         self.screen = screen
         self.bg_colour = bg_colour
-        self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("Quiz"+str(beltIndex)+".txt")        
+        self.questionList, self.selectionList, self.answerList, self.scoreList, self.timeList = wordProcessing.getTriviaScript("./assets/text/Quiz"+str(beltIndex)+".txt")        
         self.questionSequence = wordProcessing.getQuestionSequence(len(self.questionList))
         self.clock = pygame.time.Clock()
         self.emotion = "Happy"
         self.oldMousePos = pygame.mouse.get_pos()        
         pygame.mixer.init()
-        self.bgMusic = ["Bomberguy.wav", "LittleTraveller.wav", "CactusLand.wav", "PinballTwo.wav", "PuzzleKid.wav"]
+        self.bgMusic = ["./assets/sounds/Bomberguy.wav", "./assets/sounds/LittleTraveller.wav", "./assets/sounds/CactusLand.wav", "./assets/sounds/PinballTwo.wav", "./assets/sounds/PuzzleKid.wav"]
         self.soundObj = pygame.mixer.Sound(self.bgMusic[random.randrange(0,5)])
         self.soundObj.set_volume(0.7)
         self.soundObj.play(-1, fade_ms = 1500)
-        self.correctSound = pygame.mixer.Sound("ElevatorDing.wav")
-        self.incorrectSound = pygame.mixer.Sound("DoorBuzzer.wav")
+        self.correctSound = pygame.mixer.Sound("./assets/sounds/ElevatorDing.wav")
+        self.incorrectSound = pygame.mixer.Sound("./assets/sounds/DoorBuzzer.wav")
         self.mouseIsDown = False
         self.selectionButtons = []
         self.selectionButtons.append(graphics.Button(screen, 10, 534, 1040, 556, 0))
@@ -512,10 +512,10 @@ class PlayQuiz():
         global lineNumber, timer
         
         self.screen.fill(WHITE)
-        graphics.setBackground(self.screen, "Blackboard.jpg")
+        graphics.setBackground(self.screen, "./assets/images/Blackboard.jpg")
         
         
-        graphics.setCharacter(self.screen, "Girl_" + self.emotion + ".png", int(((self.screen.get_width())/3.5)), 100)
+        graphics.setCharacter(self.screen, "./assets/images/Girl_" + self.emotion + ".png", int(((self.screen.get_width())/3.5)), 100)
         graphics.drawDialogBox(self.screen, colour[beltIndex-1], 0.65)
         
         
@@ -549,22 +549,22 @@ class PlayQuiz():
         if self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():
-                    pressed = pygame.image.load("volume_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/volume_pressed.png").convert()
                 else:
-                    pressed = pygame.image.load("mute_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/mute_pressed.png").convert()
                 self.screen.blit(pressed, [self.soundButton.getX()[0], self.soundButton.getY()[0]])
             else:
                 if self.soundButton.getState():
-                    hover = pygame.image.load("volume_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/volume_hover.png").convert()
                 else:
-                    hover = pygame.image.load("mute_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/mute_hover.png").convert()
                 self.screen.blit(hover, [self.soundButton.getX()[0], self.soundButton.getY()[0]-0.5]) 
         elif self.exitButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("exit_pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/exit_pressed.png").convert()
                 self.screen.blit(pressed, [self.exitButton.getX()[0], self.exitButton.getY()[0]])
             else:
-                hover = pygame.image.load("exit_hover.png").convert()
+                hover = pygame.image.load("./assets/images/exit_hover.png").convert()
                 self.screen.blit(hover, [self.exitButton.getX()[0], self.exitButton.getY()[0]-0.5])        
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
         pygame.display.flip()    
@@ -574,12 +574,12 @@ class PlayStory():
     def __init__(self, screen, bg_colour = BLACK):
         self.screen = screen
         self.bg_colour = bg_colour
-        self.backgroundPictureList, self.foregroundPictureList, self.speakerProfilePictureList, self.speakerList, self.dialogList = wordProcessing.getLessonScript("Lesson"+str(beltIndex)+".txt")  
+        self.backgroundPictureList, self.foregroundPictureList, self.speakerProfilePictureList, self.speakerList, self.dialogList = wordProcessing.getLessonScript("./assets/text/Lesson"+str(beltIndex)+".txt")  
         
         self.soundButton = graphics.Button(screen, 930, 690, 980, 740, 0)
         self.exitButton = graphics.Button(screen, 990, 690, 1040, 740, 0)        
         
-        self.bgMusic = ["ShinyDay.wav", "PuzzleKid.wav", "LiveTogether.wav", "AutumnAvenue.wav", "MorningRush.wav"]
+        self.bgMusic = ["./assets/sounds/ShinyDay.wav", "./assets/sounds/PuzzleKid.wav", "./assets/sounds/LiveTogether.wav", "./assets/sounds/AutumnAvenue.wav", "./assets/sounds/MorningRush.wav"]
         self.soundObj = pygame.mixer.Sound(self.bgMusic[random.randrange(0,5)])
         self.soundObj.play(-1, fade_ms = 1500)                
         
@@ -681,22 +681,22 @@ class PlayStory():
         if self.soundButton.isPressed():
             if self.mouseIsDown:
                 if self.soundButton.getState():
-                    pressed = pygame.image.load("volume_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/volume_pressed.png").convert()
                 else:
-                    pressed = pygame.image.load("mute_pressed.png").convert()
+                    pressed = pygame.image.load("./assets/images/mute_pressed.png").convert()
                 self.screen.blit(pressed, [self.soundButton.getX()[0], self.soundButton.getY()[0]])
             else:
                 if self.soundButton.getState():
-                    hover = pygame.image.load("volume_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/volume_hover.png").convert()
                 else:
-                    hover = pygame.image.load("mute_hover.png").convert()
+                    hover = pygame.image.load("./assets/images/mute_hover.png").convert()
                 self.screen.blit(hover, [self.soundButton.getX()[0], self.soundButton.getY()[0]-0.5]) 
         elif self.exitButton.isPressed():
             if self.mouseIsDown:
-                pressed = pygame.image.load("exit_pressed.png").convert()
+                pressed = pygame.image.load("./assets/images/exit_pressed.png").convert()
                 self.screen.blit(pressed, [self.exitButton.getX()[0], self.exitButton.getY()[0]])
             else:
-                hover = pygame.image.load("exit_hover.png").convert()
+                hover = pygame.image.load("./assets/images/exit_hover.png").convert()
                 self.screen.blit(hover, [self.exitButton.getX()[0], self.exitButton.getY()[0]-0.5])        
         graphics.drawEssentialButtons(self.screen, self.soundButton.getState())
         
@@ -723,10 +723,10 @@ def main():
             lessonGame = PlayStory(screen)
             lessonGame.gameLoop()
         elif state == INSTRUCTIONS:
-            instructions = InfoScreen(screen, "HowToPlay_Instructions.png", INSTRUCTIONS)
+            instructions = InfoScreen(screen, "./assets/images/HowToPlay_Instructions.png", INSTRUCTIONS)
             instructions.gameLoop()
         elif state == CREDITS:
-            credits = InfoScreen(screen, "AboutUs_Credits.png", CREDITS)
+            credits = InfoScreen(screen, "./assets/images/AboutUs_Credits.png", CREDITS)
             credits.gameLoop()
     pygame.quit()
     print "Done"
