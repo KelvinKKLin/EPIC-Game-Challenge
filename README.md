@@ -1,16 +1,18 @@
 For i in Python!
 ===================
 
-Welcome to For i in Python! For i in Python is a student run team consisting of dedicated game developers and programmers who are interested in creating an interactive and appealing game for students to learn programming. All our code is open-source, and made free of charge, so feel free to download a copy of our code to use it in your own project.
+Welcome to For i in Python! For i in Python is a game made by dedicated first year Engineering students (and Edwin) who are interested in creating an interactive and appealing game for students to learn programming. All our code is open-source, so feel free to download a copy of our code to use it in your own project. This project was submitted to [McMaster's EPIC Game Challenge](http://epiclab.mcmaster.ca/?page_id=6952) in 2014, where it recieved runner-up.
 
-*** IN ORDER TO RUN THIS GAME YOU MUST FIRST INSTALL PYGAME. Appropriate installers can be found at http://www.pygame.org *** 
+**IN ORDER TO RUN THIS GAME YOU MUST FIRST INSTALL [PYGAME](http://www.pygame.org)**
 
-Your machine should also have python 2.7 installed on it. Installers for python itself can be found at http://www.python.org
+Your machine should also have [Python 2.7](http://www.python.org).
 
 INSTRUCTIONS:
 ===================
 
-In order to play open the "main.py" file and click on the "Run" menu, then the "Run Module" button. 
+To play the game, open up a terminal and type `make`.
+
+To remove compiled files, type `make clean`.
 
 CREDITS:
 ===================
