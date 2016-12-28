@@ -1,4 +1,0 @@
-What is syntax?%%The precise form or structure of a programming language.$$A tax placed on programmers to promote equaility in income.$$A word, phrase, or symbol.$$None of the above.%%1%%1%%9%%
-Which of the following is NOT a question in computer science?%%What processes can we describe?$$What can a computer do?$$What can be computed?$$None of the above%%2%%2%%12%%
-Why should you learn programming?%%It is required for future jobs.$$It is part of the twenth-century movement.$$It is a fundamental part of computer science.$$It is needed for mathematics and engineering.%%3%%2%%12%%
-What is a modern computer?%%A machine that stores information$$A machine that manipulates information$$A process that is under the control of a changeable program$$All of the above%%4%%1%%12%%
